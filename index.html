@@ -78,6 +78,41 @@
 
     #stickyBar {
       bottom: max(0.75rem, env(safe-area-inset-bottom));
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+    }
+    @media (min-width: 640px) {
+      #stickyBar {
+        left: 50% !important;
+        right: auto !important;
+        transform: translate(-50%, 0) !important;
+        bottom: 1.5rem !important;
+      }
+      #stickyBar.translate-y-28 {
+        transform: translate(-50%, 8rem) !important;
+      }
+      #botWidgetTrigger {
+        bottom: 1.5rem !important;
+        right: 1.5rem !important;
+      }
+      #botChatPanel {
+        bottom: 5.5rem !important;
+        right: 1.5rem !important;
+      }
+    }
+    @media (max-width: 639px) {
+      #botWidgetTrigger {
+        bottom: max(0.85rem, env(safe-area-inset-bottom));
+        transition: bottom 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s ease;
+      }
+      #botWidgetTrigger.has-cart-bar {
+        bottom: calc(max(0.75rem, env(safe-area-inset-bottom)) + 62px) !important;
+      }
+      #botChatPanel {
+        bottom: 0.75rem !important;
+        right: 0.75rem !important;
+        width: calc(100vw - 1.5rem) !important;
+        max-height: 80vh !important;
+      }
     }
 
     input, select, textarea {
@@ -496,24 +531,24 @@
     </div>
   </section>
 
-  <!-- MOBILE-FIRST BOTTOM FLOATING BAR -->
-  <div id="stickyBar" class="fixed left-3 right-3 sm:left-auto sm:right-6 z-40 transition-all duration-200 transform translate-y-28 opacity-0 flex items-center justify-between gap-2 max-w-lg mx-auto sm:max-w-none">
+  <!-- MOBILE-FIRST BOTTOM FLOATING BAR (CENTERED ON DESKTOP DOCK, ZERO OVERLAP) -->
+  <div id="stickyBar" class="fixed left-3 right-3 sm:left-1/2 sm:-translate-x-1/2 bottom-3 sm:bottom-6 z-40 transition-all duration-300 transform translate-y-28 opacity-0 pointer-events-none flex items-center justify-between gap-1.5 sm:gap-2.5 max-w-lg sm:max-w-xl mx-auto backdrop-blur-xl bg-slate-950/95 p-1.5 sm:p-2 rounded-2xl border border-cyan-500/40 shadow-[0_10px_35px_rgba(0,0,0,0.8)]">
     
     <!-- Left: Cart trigger & Total -->
-    <button onclick="toggleCartDrawer()" class="flex-1 sm:flex-initial flex items-center justify-between sm:justify-start gap-2.5 px-4 py-3 rounded-2xl bg-slate-900 border border-cyan-500/50 text-white font-extrabold shadow-xl active:scale-95 transition-all">
-      <div class="flex items-center gap-2">
-        <span class="text-base">🛍️</span>
-        <span class="text-xs sm:text-sm font-bold"><span id="stickyTotal">0,00 €</span></span>
+    <button onclick="toggleCartDrawer()" class="flex-1 sm:flex-initial flex items-center justify-between sm:justify-start gap-2 px-3 sm:px-4 py-2.5 rounded-xl bg-slate-900 border border-cyan-500/40 text-white font-extrabold active:scale-95 transition-all hover:border-cyan-400">
+      <div class="flex items-center gap-1.5 sm:gap-2">
+        <span class="text-sm sm:text-base">🛍️</span>
+        <span class="text-xs sm:text-sm font-bold text-white"><span id="stickyTotal">0,00 €</span></span>
       </div>
       <span id="stickyCount" class="w-5 h-5 rounded-full bg-cyan-400 text-black text-[11px] flex items-center justify-center font-black">0</span>
     </button>
 
     <!-- Right Quick Actions -->
-    <div class="flex items-center gap-1.5">
-      <button onclick="copyAndOpenVinted()" class="px-3 sm:px-4 py-3 rounded-2xl bg-[#09B1BA] text-black font-black text-xs sm:text-sm shadow-md active:scale-95 transition-all flex items-center gap-1">
+    <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+      <button onclick="copyAndOpenVinted()" class="px-2.5 sm:px-4 py-2.5 rounded-xl bg-[#09B1BA] hover:bg-[#089ea6] text-black font-black text-xs sm:text-sm shadow-md active:scale-95 transition-all flex items-center gap-1">
         <span>Vinted ↗</span>
       </button>
-      <button onclick="copyAndOpenKleinanzeigen()" class="px-3 sm:px-4 py-3 rounded-2xl bg-emerald-500 text-black font-black text-xs sm:text-sm shadow-md active:scale-95 transition-all flex items-center gap-1">
+      <button onclick="copyAndOpenKleinanzeigen()" class="px-2.5 sm:px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs sm:text-sm shadow-md active:scale-95 transition-all flex items-center gap-1">
         <span>Kleinanzeigen ↗</span>
       </button>
     </div>
@@ -522,11 +557,11 @@
   <!-- ======================================================== -->
   <!-- INTERACTIVE OTAKU CONCIERGE BOT (FLOATING LIVE ASSISTANT) -->
   <!-- ======================================================== -->
-  <!-- Bot Launcher Button (Kira AI Concierge) -->
-  <div id="botWidgetTrigger" onclick="toggleBotWidget()" class="fixed right-3.5 bottom-20 sm:bottom-6 z-40 cursor-pointer flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-slate-950/95 border border-cyan-500/60 shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:scale-105 active:scale-95 transition-all animate-glow-ring backdrop-blur-md">
-    <div class="relative w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-400 via-indigo-500 to-purple-600 flex items-center justify-center font-display font-black text-black text-xs shadow-sm">
+  <!-- Bot Launcher Button (Kira AI Concierge - Mobile Dynamic Float & Desktop Bottom-Right) -->
+  <div id="botWidgetTrigger" onclick="toggleBotWidget()" class="fixed right-3 z-40 cursor-pointer flex items-center gap-2 p-1.5 sm:px-4 sm:py-2.5 rounded-full bg-slate-950/95 border border-cyan-500/60 shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:scale-105 active:scale-95 transition-all animate-glow-ring backdrop-blur-md">
+    <div class="relative w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-400 via-indigo-500 to-purple-600 flex items-center justify-center font-display font-black text-black text-xs shadow-sm shrink-0">
       <span>K</span>
-      <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 absolute -bottom-0.5 -right-0.5 border-2 border-slate-950"></span>
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 absolute -bottom-0.5 -right-0.5 border-2 border-slate-950 animate-pulse"></span>
     </div>
     <div class="text-left leading-tight hidden sm:block">
       <div class="text-xs font-black text-white flex items-center gap-1.5 font-display tracking-wide">
@@ -893,6 +928,27 @@
         lastWebhookTime = now;
       }
 
+      function formatDiscordItems(items) {
+        if (!items) return 'Keine Artikel';
+        if (Array.isArray(items)) {
+          if (items.length === 0) return 'Warenkorb ist leer';
+          return items.map((item, idx) => {
+            if (typeof item === 'object' && item !== null) {
+              const title = item.title || item.name || item.id || 'Artikel';
+              const price = item.dealPrice !== undefined ? `${Number(item.dealPrice).toFixed(2)} €` : '';
+              return `${idx + 1}. **${title}**${price ? ' — ' + price : ''}`;
+            }
+            return `${idx + 1}. ${item}`;
+          }).join('\n');
+        }
+        if (typeof items === 'string') {
+          const trimmed = items.trim();
+          return trimmed ? trimmed : 'Keine Artikel';
+        }
+        return String(items);
+      }
+
+      const formattedItems = formatDiscordItems(payloadData && payloadData.items).substring(0, 1020);
       let embed = {};
       const buyerName = payloadData && payloadData.buyerName ? payloadData.buyerName : (document.getElementById('buyerUsernameInput') ? document.getElementById('buyerUsernameInput').value.trim() : '');
       const userDevice = typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.includes('Mobile') ? 'Smartphone' : 'Desktop';
@@ -901,15 +957,15 @@
       if (type === 'checkout') {
         const isKleinanzeigen = payloadData.platform === 'kleinanzeigen';
         embed = {
-          title: isKleinanzeigen ? 'Neue Kleinanzeigen-Kaufanfrage!' : 'Neue Vinted-Kaufanfrage!',
-          description: 'Ein Käufer hat auf **otakuvault.de** ein Paket zusammengestellt!',
+          title: isKleinanzeigen ? '🟢 Neue Kleinanzeigen-Kaufanfrage!' : '⚡ Neue Vinted-Kaufanfrage!',
+          description: `Ein Käufer hat auf **otakuvault.de** ein Paket für **${isKleinanzeigen ? 'Kleinanzeigen' : 'Vinted'}** zusammengestellt!`,
           color: isKleinanzeigen ? 0x10B981 : 0x09B1BA,
           fields: [
-            { name: 'Plattform', value: isKleinanzeigen ? 'Kleinanzeigen' : 'Vinted (@leonardoitde)', inline: true },
-            { name: 'Gesamtbetrag', value: payloadData.total || 'Offen', inline: true },
-            { name: 'Käufer', value: buyerName || 'Anonym / Erstkontakt', inline: true },
-            { name: 'Artikel', value: String(payloadData.items || 'Keine Artikel').substring(0, 1000) },
-            { name: 'Gerät / Sprache', value: `${langBadge} • ${userDevice}`, inline: true }
+            { name: '🛒 Plattform', value: isKleinanzeigen ? 'Kleinanzeigen' : 'Vinted (@leonardoitde)', inline: true },
+            { name: '💰 Gesamtbetrag', value: payloadData.total || 'Offen', inline: true },
+            { name: '👤 Käufer', value: buyerName || 'Anonym / Erstkontakt', inline: true },
+            { name: '📦 Ausgewählte Artikel', value: formattedItems },
+            { name: '📱 Gerät & Sprache', value: `${langBadge} • ${userDevice}`, inline: true }
           ],
           footer: { text: 'Otaku Vault Live Bot' },
           timestamp: new Date().toISOString()
@@ -918,64 +974,66 @@
         const isKleinanzeigen = payloadData.platform === 'kleinanzeigen';
         const p = payloadData.product || {};
         embed = {
-          title: isKleinanzeigen ? 'Sofort-Kauf: Kleinanzeigen' : 'Sofort-Kauf: Vinted',
-          description: `Käufer hat **${p.title || 'Artikel'}** angeklickt!`,
+          title: isKleinanzeigen ? '🟢 Sofort-Kauf: Kleinanzeigen' : '⚡ Sofort-Kauf: Vinted',
+          description: `Käufer hat Einzelartikel **${p.title || 'Artikel'}** angeklickt!`,
           color: isKleinanzeigen ? 0x10B981 : 0x09B1BA,
           fields: [
-            { name: 'Artikel', value: p.title || 'Unbekannt', inline: true },
-            { name: 'Deal-Preis', value: `${p.dealPrice ? p.dealPrice.toFixed(2) : '0.00'} €`, inline: true },
-            { name: 'Gerät', value: `${userDevice} • ${langBadge}`, inline: true }
+            { name: '🏷️ Artikel', value: p.title || 'Unbekannt', inline: true },
+            { name: '💵 Deal-Preis', value: `${p.dealPrice ? p.dealPrice.toFixed(2) : '0.00'} € (UVP: ${p.oldPrice ? p.oldPrice.toFixed(2) : '0.00'} €)`, inline: true },
+            { name: '📱 Gerät & Sprache', value: `${userDevice} • ${langBadge}`, inline: true }
           ],
           footer: { text: 'otakuvault.de • Single Lead' },
           timestamp: new Date().toISOString()
         };
       } else if (type === 'offer') {
         embed = {
-          title: 'NEUER PREISVORSCHLAG!',
-          description: `Ein Käufer bietet **${payloadData.offerPrice} €**!`,
+          title: '🔥 NEUER PREISVORSCHLAG!',
+          description: `Ein Käufer bietet **${payloadData.offerPrice} €** für sein Wunsch-Paket!`,
           color: 0xF59E0B,
           fields: [
-            { name: 'Angebotspreis', value: `**${payloadData.offerPrice} €**`, inline: true },
-            { name: 'Regulär', value: payloadData.regularTotal || 'N/A', inline: true },
-            { name: 'Käufer', value: buyerName || 'Nicht angegeben', inline: true },
-            { name: 'Artikel im Paket', value: String(payloadData.items || 'Keine Artikel').substring(0, 1000) },
-            { name: 'Gerät', value: `${userDevice} • ${langBadge}`, inline: true }
+            { name: '💸 Angebotspreis', value: `**${payloadData.offerPrice} €**`, inline: true },
+            { name: '🏷️ Regulärer Wert', value: payloadData.regularTotal || 'N/A', inline: true },
+            { name: '👤 Käufer-Name', value: buyerName || 'Nicht angegeben', inline: true },
+            { name: '📦 Enthaltene Artikel', value: formattedItems },
+            { name: '📱 Info', value: `${userDevice} • ${langBadge}`, inline: true }
           ],
           footer: { text: 'Otaku Vault Verhandlung' },
           timestamp: new Date().toISOString()
         };
       } else if (type === 'cart_update') {
+        const count = Array.isArray(payloadData.items) ? payloadData.items.length : 1;
         embed = {
-          title: 'Warenkorb-Update',
-          description: `Aktueller Stand: **${payloadData.total || '0,00 €'}**`,
+          title: '🛒 Warenkorb-Update (Live Visitor)',
+          description: `Ein Besucher stellt gerade ein Paket zusammen (**${count} Artikel**)
+**Aktueller Wert:** ${payloadData.total || '0,00 €'}`,
           color: 0x6366F1,
           fields: [
-            { name: 'Artikel', value: String(payloadData.items || 'Leer').substring(0, 1000) },
-            { name: 'Gerät', value: `${userDevice} • ${langBadge}`, inline: true }
+            { name: '📦 Ausgewählte Artikel', value: formattedItems },
+            { name: '📱 Gerät & Sprache', value: `${userDevice} • ${langBadge}`, inline: true }
           ],
-          footer: { text: 'Otaku Vault Live Tracking' },
+          footer: { text: 'Otaku Vault Live Visitor Tracking' },
           timestamp: new Date().toISOString()
         };
       } else if (type === 'chat_message') {
         embed = {
-          title: 'Chat-Nachricht an Kira AI / Leo',
+          title: '💬 Chat-Nachricht an Kira AI / Leo',
           description: `"${payloadData.message}"`,
           color: 0x8B5CF6,
           fields: [
             { name: 'Warenkorb', value: payloadData.cartSummary || 'Leer', inline: true },
-            { name: 'Gerät', value: `${userDevice} • ${langBadge}`, inline: true }
+            { name: 'Gerät & Sprache', value: `${userDevice} • ${langBadge}`, inline: true }
           ],
-          footer: { text: 'Kira AI Chat' },
+          footer: { text: 'Kira AI Chat Lead' },
           timestamp: new Date().toISOString()
         };
       } else if (type === 'test_ping') {
         embed = {
-          title: 'Test-Signal von der Website',
+          title: '🚀 Test-Signal von der Website',
           description: 'Der Discord Webhook ist live und einsatzbereit!',
           color: 0x10B981,
           fields: [
-            { name: 'Status', value: 'Online & Aktiv', inline: true },
-            { name: 'Gerät', value: `${userDevice} • ${langBadge}`, inline: true }
+            { name: 'Status', value: 'Online & Aktiv 🟢', inline: true },
+            { name: 'Gerät & Sprache', value: `${userDevice} • ${langBadge}`, inline: true }
           ],
           footer: { text: 'Otaku Vault System Test' },
           timestamp: new Date().toISOString()
@@ -1587,10 +1645,15 @@
       document.getElementById('stickyCount').innerText = count;
       
       const stickyBar = document.getElementById('stickyBar');
+      const botTrigger = document.getElementById('botWidgetTrigger');
       if (count > 0) {
-        stickyBar.classList.remove('translate-y-28', 'opacity-0');
+        stickyBar.classList.remove('translate-y-28', 'opacity-0', 'pointer-events-none');
+        stickyBar.classList.add('pointer-events-auto');
+        if (botTrigger) botTrigger.classList.add('has-cart-bar');
       } else {
-        stickyBar.classList.add('translate-y-28', 'opacity-0');
+        stickyBar.classList.add('translate-y-28', 'opacity-0', 'pointer-events-none');
+        stickyBar.classList.remove('pointer-events-auto');
+        if (botTrigger) botTrigger.classList.remove('has-cart-bar');
       }
 
       // Calculate totals
