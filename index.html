@@ -1268,8 +1268,7 @@
             { name: '💵 Angebotener Wunschpreis', value: `**${payloadData.offerPrice} €**`, inline: true },
             { name: '📊 Regulärer Bundle-Preis', value: `${payloadData.regularTotal}`, inline: true },
             { name: '👤 Käufer-Kontakt', value: payloadData.buyerName ? `@${payloadData.buyerName}` : (buyerName ? `@${buyerName}` : 'Nicht angegeben'), inline: true },
-            { name: `📦 Gewählte Artikel (${payloadData.items.length})`, value: payloadData.items.map(it => `• ${it.title} (${it.dealPrice.toFixed(2)} €)`).join('
-').slice(0, 1024), inline: false },
+            { name: `📦 Gewählte Artikel (${payloadData.items.length})`, value: payloadData.items.map(it => `• ${it.title} (${it.dealPrice.toFixed(2)} €)`).join('\n').slice(0, 1024), inline: false },
             { name: '🔗 Schnellantwort', value: `[💬 Vinted Chat öffnen](${vintedListingUrl}) • [🟢 Kleinanzeigen öffnen](${kleinanzeigenListingUrl})`, inline: false }
           ],
           footer: { text: 'Otaku Vault Price Negotiation • Schnelle Antwort erhöht Abschlussrate!' },
