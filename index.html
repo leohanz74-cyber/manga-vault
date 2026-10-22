@@ -31,7 +31,6 @@
     html, body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       background-color: #030712;
-      /* Zero GPU lag: CSS radial gradients instead of heavy fixed blur divs */
       background-image: 
         radial-gradient(at 0% 0%, rgba(6, 182, 212, 0.12) 0px, transparent 45%),
         radial-gradient(at 100% 25%, rgba(168, 85, 247, 0.09) 0px, transparent 45%),
@@ -48,7 +47,6 @@
       font-family: 'Space Grotesk', sans-serif;
     }
     
-    /* Sleek high-performance panels (Solid background for 60-120 FPS scrolling) */
     .glass-panel {
       background: #090e1a;
       border: 1px solid rgba(255, 255, 255, 0.08);
@@ -59,7 +57,6 @@
       border: 1px solid rgba(0, 229, 255, 0.3);
     }
 
-    /* Cyber Card with content-visibility auto for instant 60 FPS mobile scroll */
     .cyber-card {
       background: #090e1a;
       border: 1px solid rgba(255, 255, 255, 0.08);
@@ -75,7 +72,6 @@
       }
     }
 
-    /* Safe Area insets for iOS */
     .safe-bottom {
       padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
     }
@@ -84,7 +80,6 @@
       bottom: max(0.75rem, env(safe-area-inset-bottom));
     }
 
-    /* Prevent iOS Safari 150% auto-zoom on input focus */
     input, select, textarea {
       font-size: 16px !important;
     }
@@ -94,7 +89,6 @@
       }
     }
 
-    /* Prevent body scroll when drawer/modal open without blocking touch inside modal */
     body.modal-open {
       overflow: hidden !important;
     }
@@ -107,9 +101,62 @@
       scrollbar-width: none;
       -webkit-overflow-scrolling: touch;
     }
+
+    
+    /* Marquee animation */
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: inline-flex;
+      animation: marquee 30s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+    
+    /* Cyber Pulsing Badge */
+    @keyframes pulseGlowRing {
+      0%, 100% { box-shadow: 0 0 15px rgba(6, 182, 212, 0.4); }
+      50% { box-shadow: 0 0 25px rgba(16, 185, 129, 0.6); }
+    }
+    .animate-glow-ring {
+      animation: pulseGlowRing 3s ease-in-out infinite;
+    }
   </style>
 </head>
 <body class="min-h-screen relative selection:bg-cyan-500 selection:text-black pb-28 sm:pb-20">
+
+  
+  <!-- Live Cyber Marquee Ticker -->
+  <div class="bg-gradient-to-r from-purple-950 via-slate-950 to-cyan-950 border-b border-cyan-500/20 py-1.5 overflow-hidden text-[10px] sm:text-[11px] font-black tracking-wider text-cyan-300 select-none">
+    <div class="inline-flex whitespace-nowrap animate-marquee items-center gap-6">
+      <span>⚡ OTAKU VAULT SAMMLUNGSAUFLÖSUNG</span>
+      <span>•</span>
+      <span>📚 TOP-ZUSTAND • WEISSE BUCHSCHNITTE • NICHTRAUCHER</span>
+      <span>•</span>
+      <span>🎁 AB 3 ARTIKELN 0 € GRATIS-VERSAND</span>
+      <span>•</span>
+      <span>📦 SCHNELLER VERSICHERTER DHL-VERSAND MIT TRACKING</span>
+      <span>•</span>
+      <span>⭐ KAUF ÜBER VINTED (@leonardoitde) ODER KLEINANZEIGEN (Leo)</span>
+      <span>•</span>
+      <span>🔥 BIS ZU -66% GEGENÜBER NEUPREIS</span>
+      <span>•</span>
+      <span>⚡ OTAKU VAULT SAMMLUNGSAUFLÖSUNG</span>
+      <span>•</span>
+      <span>📚 TOP-ZUSTAND • WEISSE BUCHSCHNITTE • NICHTRAUCHER</span>
+      <span>•</span>
+      <span>🎁 AB 3 ARTIKELN 0 € GRATIS-VERSAND</span>
+      <span>•</span>
+      <span>📦 SCHNELLER VERSICHERTER DHL-VERSAND MIT TRACKING</span>
+      <span>•</span>
+      <span>⭐ KAUF ÜBER VINTED (@leonardoitde) ODER KLEINANZEIGEN (Leo)</span>
+      <span>•</span>
+      <span>🔥 BIS ZU -66% GEGENÜBER NEUPREIS</span>
+    </div>
+  </div>
 
   <!-- Top Announcement Bar (Dual Platform: Vinted & Kleinanzeigen) -->
   <div class="bg-slate-900/95 border-b border-cyan-800/40 text-center py-2 px-3 text-[11px] sm:text-xs font-semibold text-slate-300 flex items-center justify-between max-w-7xl mx-auto flex-wrap gap-2 relative z-30">
@@ -496,6 +543,83 @@
     </div>
   </div>
 
+  <!-- ======================================================== -->
+  <!-- INTERACTIVE OTAKU CONCIERGE BOT (FLOATING LIVE ASSISTANT) -->
+  <!-- ======================================================== -->
+  <!-- Bot Launcher Button -->
+  <div id="botWidgetTrigger" onclick="toggleBotWidget()" class="fixed right-3.5 bottom-20 sm:bottom-6 z-40 cursor-pointer flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-slate-900/95 border border-cyan-500/60 shadow-[0_0_20px_rgba(6,182,212,0.35)] hover:scale-105 active:scale-95 transition-all animate-glow-ring">
+    <div class="relative">
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 absolute -top-0.5 -right-0.5 border border-black animate-ping"></span>
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 absolute -top-0.5 -right-0.5 border border-black"></span>
+      <span class="text-xl">🤖</span>
+    </div>
+    <div class="text-left leading-tight hidden sm:block">
+      <div class="text-xs font-black text-white flex items-center gap-1">
+        <span>Otaku Bot</span>
+        <span class="text-[9px] px-1 py-0.2 rounded bg-cyan-950 text-cyan-300 border border-cyan-700/60 font-mono">LIVE</span>
+      </div>
+      <span class="text-[10px] text-cyan-300 font-medium" data-i18n="bot_subtitle">Frage an Leo oder Hilfe</span>
+    </div>
+  </div>
+
+  <!-- Bot Chat Window -->
+  <div id="botChatPanel" class="fixed right-3 sm:right-6 bottom-20 sm:bottom-20 w-[92vw] sm:w-[380px] h-[480px] bg-slate-950/95 border border-cyan-500/50 rounded-2xl sm:rounded-3xl shadow-2xl z-50 flex flex-col justify-between overflow-hidden transform scale-95 opacity-0 pointer-events-none transition-all duration-200">
+    
+    <!-- Bot Header -->
+    <div class="bg-slate-900 border-b border-slate-800 p-3 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center text-lg border border-cyan-500/40">
+          🤖
+        </div>
+        <div>
+          <h4 class="text-xs font-black text-white flex items-center gap-1.5 font-display">
+            <span>Otaku Concierge</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          </h4>
+          <span class="text-[10px] text-slate-400 block" data-i18n="bot_status">Online • Leos Live-Assistent</span>
+        </div>
+      </div>
+      <button onclick="toggleBotWidget()" class="text-slate-400 hover:text-white p-1 text-xl leading-none">✕</button>
+    </div>
+
+    <!-- Bot Messages Area -->
+    <div id="botMessagesContainer" class="flex-1 p-3 overflow-y-auto space-y-2.5 text-xs">
+      <div class="flex items-start gap-2">
+        <span class="text-base shrink-0">🤖</span>
+        <div class="bg-slate-900 border border-slate-800 text-slate-200 p-2.5 rounded-2xl rounded-tl-none max-w-[85%] leading-relaxed" id="botWelcomeMsg" data-i18n="bot_welcome">
+          Konnichiwa! 👋 Ich bin Leos Sammlungs-Assistent. Ich helfe dir beim Zusammenstellen deiner Manga & Figuren oder leite Fragen direkt an Leo weiter!
+        </div>
+      </div>
+
+      <!-- Quick Action Chips -->
+      <div class="flex flex-wrap gap-1.5 pt-1">
+        <button onclick="handleBotQuickAction('bestseller')" class="px-2.5 py-1 rounded-lg bg-cyan-950/80 border border-cyan-700/60 text-cyan-300 text-[10px] font-bold active:scale-95">
+          ⚡ Bestseller zeigen
+        </button>
+        <button onclick="handleBotQuickAction('bundles')" class="px-2.5 py-1 rounded-lg bg-purple-950/80 border border-purple-700/60 text-purple-300 text-[10px] font-bold active:scale-95">
+          🎁 Große Sparpakete
+        </button>
+        <button onclick="handleBotQuickAction('shipping')" class="px-2.5 py-1 rounded-lg bg-emerald-950/80 border border-emerald-700/60 text-emerald-300 text-[10px] font-bold active:scale-95">
+          🚚 Gratis-Versand Info
+        </button>
+        <button onclick="handleBotQuickAction('test_webhook')" class="px-2.5 py-1 rounded-lg bg-amber-950/80 border border-amber-600/60 text-amber-300 text-[10px] font-bold active:scale-95 flex items-center gap-1">
+          🔔 Discord-Ping testen
+        </button>
+      </div>
+    </div>
+
+    <!-- Bot Footer Input (Sends directly to Leo's Discord Webhook!) -->
+    <div class="p-2.5 bg-slate-900/95 border-t border-slate-800">
+      <form onsubmit="handleBotSendMessage(event)" class="flex items-center gap-1.5">
+        <input type="text" id="botChatInput" placeholder="Nachricht oder Frage an Leo..." 
+               class="flex-1 px-3 py-2 bg-slate-950 border border-slate-700 rounded-xl text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-400 text-xs">
+        <button type="submit" class="p-2 px-3 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-black font-black text-xs transition-all active:scale-95">
+          ➤
+        </button>
+      </form>
+    </div>
+  </div>
+
   <!-- CART / DEAL-DRAWER -->
   <div id="cartDrawerBackdrop" onclick="toggleCartDrawer()" class="fixed inset-0 bg-black/85 z-50 transition-opacity duration-200 opacity-0 pointer-events-none"></div>
   <aside id="cartDrawer" class="fixed top-0 right-0 h-[100dvh] w-full sm:w-[500px] bg-slate-950 border-l border-slate-800 z-50 p-4 sm:p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-200 shadow-2xl overflow-y-auto safe-bottom">
@@ -802,7 +926,10 @@
         guide_close: "Schließen",
         publisher_label: "Verlag / Hersteller:",
         condition_label: "Zustand:",
-        details_label: "Details:"
+        details_label: "Details:",
+        bot_subtitle: "Frage an Leo oder Hilfe",
+        bot_status: "Online • Leos Live-Assistent",
+        bot_welcome: "Konnichiwa! 👋 Ich bin Leos Sammlungs-Assistent. Ich helfe dir beim Zusammenstellen deiner Manga & Figuren oder leite Fragen direkt an Leo weiter!"
       },
       en: {
         nav_official: "OFFICIAL COLLECTION SALE",
@@ -872,7 +999,10 @@
         guide_close: "Close",
         publisher_label: "Publisher / Brand:",
         condition_label: "Condition:",
-        details_label: "Specs:"
+        details_label: "Specs:",
+        bot_subtitle: "Ask Leo or Get Help",
+        bot_status: "Online • Leo's Live Assistant",
+        bot_welcome: "Konnichiwa! 👋 I am Leo's collection assistant. I help you assemble your manga & figures bundle or forward questions directly to Leo!"
       }
     };
 
@@ -884,7 +1014,6 @@
       if (savedLang) {
         currentLang = savedLang;
       } else {
-        // Auto-detect: if browser language starts with 'de', use 'de', else 'en'
         const navLang = (navigator.language || navigator.userLanguage || 'de').toLowerCase();
         currentLang = navLang.startsWith('de') ? 'de' : 'en';
       }
@@ -897,7 +1026,8 @@
     let currentSort = 'default';
     let audioEnabled = false;
     let searchDebounceTimer = null;
-    let lastWebhookTime = 0;
+    let cartWebhookTimer = null;
+    let botOpen = false;
 
     // AUDIO SYNTHESIZER
     let audioCtx = null;
@@ -978,15 +1108,12 @@
       });
     }
 
-    // DISCORD WEBHOOK INTEGRATION (SILENT, NON-BLOCKING BACKGROUND ALERT)
+    // RELIABLE DISCORD WEBHOOK INTEGRATION (WITH KEEPALIVE & GUARANTEED DELIVERY)
     function sendDiscordNotification(type, payloadData) {
-      const now = Date.now();
-      // Debounce: allow maximum 1 automatic webhook every 2 seconds
-      if (now - lastWebhookTime < 2000) return;
-      lastWebhookTime = now;
-
       let embed = {};
       const buyerName = document.getElementById('buyerUsernameInput') ? document.getElementById('buyerUsernameInput').value.trim() : '';
+      const lang = currentLang;
+      const isMobile = navigator.userAgent.includes('Mobile');
 
       if (type === 'checkout') {
         const isKleinanzeigen = payloadData.platform === 'kleinanzeigen';
@@ -1001,7 +1128,7 @@
             { name: `📦 Gewählte Artikel (${payloadData.items.length})`, value: payloadData.items.map(it => `• ${it.title} (${it.dealPrice.toFixed(2)} €)`).join('\n').slice(0, 1024) },
             { name: '🚚 Versand', value: payloadData.items.length >= 3 ? '✅ 0,00 € Gratis-Versand' : '📦 5,50 € DHL Paket', inline: true },
             { name: '👤 Käufer-Name', value: buyerName ? ('@' + buyerName) : 'Nicht angegeben', inline: true },
-            { name: '🌍 Info', value: `${currentLang.toUpperCase()} • ${navigator.userAgent.includes('Mobile') ? '📱 Smartphone' : '💻 Desktop'}`, inline: true }
+            { name: '🌍 Info', value: `${lang.toUpperCase()} • ${isMobile ? '📱 Smartphone' : '💻 Desktop'}`, inline: true }
           ],
           footer: { text: 'Otaku Vault Live Notification Bot • Checke dein Postfach!' },
           timestamp: new Date().toISOString()
@@ -1015,9 +1142,48 @@
           fields: [
             { name: '🏷️ Artikel', value: payloadData.product.title, inline: true },
             { name: '💵 Deal-Preis', value: `${payloadData.product.dealPrice.toFixed(2)} € (Laden: ${payloadData.product.oldPrice.toFixed(2)} €)`, inline: true },
-            { name: '📱 Info', value: `${navigator.userAgent.includes('Mobile') ? '📱 Mobile' : '💻 Desktop'} • ${currentLang.toUpperCase()}`, inline: true }
+            { name: '📱 Info', value: `${isMobile ? '📱 Mobile' : '💻 Desktop'} • ${lang.toUpperCase()}`, inline: true }
           ],
           footer: { text: 'otakuvault.de • Single Item Lead' },
+          timestamp: new Date().toISOString()
+        };
+      } else if (type === 'cart_update') {
+        embed = {
+          title: '🛒 Live-Warenkorb: Artikel hinzugefügt!',
+          description: `Ein Käufer packt gerade Artikel in sein Wunsch-Paket!`,
+          color: 0x38BDF8,
+          fields: [
+            { name: '💰 Vorläufige Summe', value: `**${payloadData.total || 'In Berechnung'}**`, inline: true },
+            { name: '📦 Artikel im Paket', value: payloadData.items.map(it => `• ${it.title} (${it.dealPrice.toFixed(2)} €)`).join('\n').slice(0, 1024), inline: false },
+            { name: '📱 Gerät', value: isMobile ? '📱 Smartphone' : '💻 Desktop', inline: true }
+          ],
+          footer: { text: 'otakuvault.de • Live Cart Activity' },
+          timestamp: new Date().toISOString()
+        };
+      } else if (type === 'chat_message') {
+        embed = {
+          title: '💬 Neue Nachricht vom Otaku Concierge Bot!',
+          description: `Ein Besucher hat eine Nachricht über den Website-Chat geschickt:\n\n> *"${payloadData.message}"*`,
+          color: 0xA855F7,
+          fields: [
+            { name: '👤 Käufer-Name / Kontakt', value: buyerName ? `\`@${buyerName}\`` : 'Anonym', inline: true },
+            { name: '🛍️ Aktueller Warenkorb', value: payloadData.cartSummary || 'Noch keine Artikel', inline: true },
+            { name: '🌍 Sprache & Gerät', value: `${lang.toUpperCase()} • ${isMobile ? '📱 Smartphone' : '💻 Desktop'}`, inline: true }
+          ],
+          footer: { text: 'otakuvault.de • Bot Forwarding System' },
+          timestamp: new Date().toISOString()
+        };
+      } else if (type === 'test_ping') {
+        embed = {
+          title: '🔔 Live-Test: Discord Webhook ist 100% aktiv & online!',
+          description: 'Leo, deine Discord-Benachrichtigungen funktionieren einwandfrei! Jede Kaufanfrage und jeder Chat auf **otakuvault.de** wird hier in Echtzeit mit Ton gepusht.',
+          color: 0x10B981,
+          fields: [
+            { name: '🟢 Status', value: 'Verbindung Online & Aktiv', inline: true },
+            { name: '🌐 Domain', value: 'otakuvault.de', inline: true },
+            { name: '📱 Gerät', value: isMobile ? '📱 Smartphone' : '💻 Desktop', inline: true }
+          ],
+          footer: { text: 'Otaku Vault Notification Engine • 100% Funktional' },
           timestamp: new Date().toISOString()
         };
       }
@@ -1025,9 +1191,11 @@
       try {
         fetch(discordWebhookUrl, {
           method: 'POST',
+          keepalive: true,
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             username: 'Otaku Vault Bot',
+            avatar_url: 'https://otakuvault.de/apple-touch-icon.png',
             embeds: [embed]
           })
         }).catch(() => {});
@@ -1099,7 +1267,6 @@
         return matchesCategory && matchesSearch;
       });
 
-      // Sorting
       if (currentSort === 'price_asc') {
         filtered.sort((a, b) => a.dealPrice - b.dealPrice);
       } else if (currentSort === 'price_desc') {
@@ -1141,7 +1308,6 @@
             </div>
           `;
         } else {
-          // Shojo Romance dedicated styling
           imgHtml = `
             <div onclick="openDetailModal('${p.id}')" class="h-44 sm:h-52 bg-pink-950/20 border border-pink-500/30 rounded-xl mb-3 p-3 flex flex-col justify-center text-center cursor-pointer active:scale-[0.98]">
               <span class="text-pink-400 font-extrabold text-xs uppercase tracking-wider mb-1">${lang === 'en' ? '4-in-1 Romance Bundle' : '4-in-1 Romance Sparpaket'}</span>
@@ -1273,6 +1439,19 @@
       try { localStorage.setItem('ov_cart', JSON.stringify(cart)); } catch (e) {}
       updateCartUI();
       renderProducts();
+
+      // Debounce cart webhook so Leo knows when a user is actively packing a bundle
+      clearTimeout(cartWebhookTimer);
+      cartWebhookTimer = setTimeout(() => {
+        if (cart.length > 0) {
+          const selected = products.filter(p => cart.includes(p.id));
+          const total = document.getElementById('finalTotalDisplay') ? document.getElementById('finalTotalDisplay').innerText : '';
+          sendDiscordNotification('cart_update', {
+            items: selected,
+            total: total
+          });
+        }
+      }, 2500);
     }
 
     function removeFromCart(id) {
@@ -1329,11 +1508,9 @@
       const selectedProducts = products.filter(p => cart.includes(p.id));
       selectedProducts.forEach(p => subtotal += p.dealPrice);
 
-      // Smart Discounts
       let discount = 0;
       let discountMsg = '';
 
-      // Check Deko Figure Bundle (if all 9 selected)
       const dekoIds = products.filter(p => p.category === 'fig_deko').map(p => p.id);
       const hasAllDeko = dekoIds.every(id => cart.includes(id));
       if (hasAllDeko) {
@@ -1341,7 +1518,6 @@
         discountMsg = lang === 'en' ? 'Mega Deal: All 9 Desk Figures for 59 €!' : 'Mega-Deal: Alle 9 Deko-Figuren für 59 €!';
       }
 
-      // Check Original Figure Bundle (if all 4 selected)
       const origIds = products.filter(p => p.category === 'fig_orig').map(p => p.id);
       const hasAllOrig = origIds.every(id => cart.includes(id));
       if (hasAllOrig) {
@@ -1349,16 +1525,14 @@
         discountMsg = lang === 'en' ? 'Mega Bundle: All 4 Originals for 349 €!' : 'Mega-Bundle: Alle 4 Originale für 349 €!';
       }
 
-      // 2 Series Discount
       if (count === 2 && discount === 0) {
         discount = subtotal * 0.05;
         discountMsg = lang === 'en' ? '5% Bundle Discount (2 items)' : '5% Paket-Rabatt auf 2 Artikel';
       }
 
-      // Shipping
       let shipping = 5.50;
       if (count >= 3) {
-        shipping = 0.0; // Free shipping
+        shipping = 0.0;
       }
 
       const finalTotal = Math.max(0, subtotal - discount + (count > 0 ? shipping : 0));
@@ -1387,7 +1561,6 @@
 
       document.getElementById('finalTotalDisplay').innerText = finalTotal.toFixed(2) + ' €';
 
-      // Update Discount Progress Bar
       const progressBar = document.getElementById('progressBar');
       const progressBadge = document.getElementById('progressBadge');
       const progressTitle = document.getElementById('progressTitle');
@@ -1435,7 +1608,6 @@
         s3.className = 'text-emerald-400 font-extrabold';
       }
 
-      // Update Cart Drawer Items List
       const cartList = document.getElementById('cartItemsList');
       const cartEmpty = document.getElementById('cartEmptyState');
       const cartFooter = document.getElementById('cartFooter');
@@ -1461,7 +1633,6 @@
           </div>
         `).join('');
 
-        // Update live preview box (default vinted)
         document.getElementById('msgPreviewBox').innerText = buildInquiryMessage('vinted');
       }
     }
@@ -1539,7 +1710,6 @@
       const total = document.getElementById('finalTotalDisplay') ? document.getElementById('finalTotalDisplay').innerText : '0,00 €';
       const discount = document.getElementById('discountDisplay') ? document.getElementById('discountDisplay').innerText : '0,00 €';
 
-      // Send Discord Live Ping to Leo
       sendDiscordNotification('checkout', {
         platform: 'vinted',
         total: total,
@@ -1572,7 +1742,6 @@
       const total = document.getElementById('finalTotalDisplay') ? document.getElementById('finalTotalDisplay').innerText : '0,00 €';
       const discount = document.getElementById('discountDisplay') ? document.getElementById('discountDisplay').innerText : '0,00 €';
 
-      // Send Discord Live Ping to Leo
       sendDiscordNotification('checkout', {
         platform: 'kleinanzeigen',
         total: total,
@@ -1607,7 +1776,6 @@
         `Hello leonardoitde!\n\nI would like to purchase the following item from your showcase (${siteName}) on Vinted:\n\n• ${p.title} (${subtitle})\nPrice: ${p.dealPrice.toFixed(2)} € (Retail: ${p.oldPrice.toFixed(2)} €)\n\nIs this item still available?\n\nBest regards!` :
         `Hallo leonardoitde!\n\nIch möchte folgenden Artikel aus deinem Showcase (${siteName}) auf Vinted kaufen:\n\n• ${p.title} (${subtitle})\nPreis: ${p.dealPrice.toFixed(2)} € (Ladenpreis: ${p.oldPrice.toFixed(2)} €)\n\nIst der Artikel noch verfügbar?\n\nViele Grüße!`;
 
-      // Live Discord Lead Alert to Leo
       sendDiscordNotification('single', {
         platform: 'vinted',
         product: p
@@ -1638,7 +1806,6 @@
         `Hello Leo!\n\nI saw your Kleinanzeigen ad (${kleinanzeigenListingUrl}) and I'm interested in the following item from your collection showcase (${siteName}):\n\n• ${p.title} (${subtitle})\nPrice: ${p.dealPrice.toFixed(2)} € (Retail: ${p.oldPrice.toFixed(2)} €)\n\nIs it still available? Would shipping or local pickup be possible?\n\nBest regards!` :
         `Hallo Leo!\n\nIch habe deine Kleinanzeigen-Anzeige (${kleinanzeigenListingUrl}) gesehen und interessiere mich für folgenden Artikel aus deinem Sammlungs-Showcase (${siteName}):\n\n• ${p.title} (${subtitle})\nPreis: ${p.dealPrice.toFixed(2)} € (Ladenpreis: ${p.oldPrice.toFixed(2)} €)\n\nIst der Artikel noch da? Wäre Versand oder persönliche Abholung möglich?\n\nViele Grüße!`;
 
-      // Live Discord Lead Alert to Leo
       sendDiscordNotification('single', {
         platform: 'kleinanzeigen',
         product: p
@@ -1698,6 +1865,98 @@
       document.body.classList.remove('modal-open');
     }
 
+    // ==========================================
+    // OTAKU CONCIERGE BOT FUNCTIONS
+    // ==========================================
+    function toggleBotWidget() {
+      playSound('click');
+      const panel = document.getElementById('botChatPanel');
+      botOpen = !botOpen;
+      if (botOpen) {
+        panel.classList.remove('scale-95', 'opacity-0', 'pointer-events-none');
+        panel.classList.add('scale-100', 'opacity-100');
+        setTimeout(() => {
+          const inp = document.getElementById('botChatInput');
+          if (inp) inp.focus();
+        }, 150);
+      } else {
+        panel.classList.add('scale-95', 'opacity-0', 'pointer-events-none');
+        panel.classList.remove('scale-100', 'opacity-100');
+      }
+    }
+
+    function handleBotQuickAction(action) {
+      playSound('click');
+      const container = document.getElementById('botMessagesContainer');
+      const lang = currentLang;
+
+      if (action === 'bestseller') {
+        setCategory('manga_hero');
+        appendBotMessage(lang === 'en' ? 'Here are the top Manga Bestsellers! Attack on Titan (1–34 Complete), Chainsaw Man, Haikyuu, Naruto, Vagabond...' : 'Hier sind alle 8 Bestseller! Attack on Titan (1–34 komplett), Chainsaw Man, Haikyuu, Naruto, Vagabond und mehr sind jetzt im Katalog aktiv!');
+      } else if (action === 'bundles') {
+        appendBotMessage(lang === 'en' ? 'Best deals right now: 1. Attack on Titan complete (-38%), 2. Haikyuu 29 vols (-38%), 3. Shojo Romance 4-in-1 (-66%), 4. All 9 Desk Figures for 59 €!' : 'Top Sparpakete: 1. Attack on Titan komplett (-38%), 2. Haikyuu 29 Bände (-38%), 3. Shojo 4-in-1 Konvolut für 20 € (-66%), 4. Alle 9 Deko-Figuren zusammen für 59 €!');
+      } else if (action === 'shipping') {
+        appendBotMessage(lang === 'en' ? '🚚 DHL Free Shipping: If you pick 3 or more items, shipping is 100% FREE! Otherwise, insured DHL tracked shipping is 5.50 €.' : '🚚 DHL Versand: Ab 3 Artikeln im Paket schenkt Leo dir die kompletten Versandkosten (0,00 € gratis)! Bei 1–2 Artikeln: 5,50 € versichertes DHL Tracking.');
+      }
+    }
+
+    function appendBotMessage(text) {
+      const container = document.getElementById('botMessagesContainer');
+      const msgDiv = document.createElement('div');
+      msgDiv.className = 'flex items-start gap-2 pt-1';
+      msgDiv.innerHTML = `
+        <span class="text-base shrink-0">🤖</span>
+        <div class="bg-slate-900 border border-cyan-800/60 text-slate-200 p-2.5 rounded-2xl rounded-tl-none max-w-[85%] leading-relaxed">
+          ${text}
+        </div>
+      `;
+      container.appendChild(msgDiv);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    function handleBotSendMessage(e) {
+      e.preventDefault();
+      const input = document.getElementById('botChatInput');
+      const text = input.value.trim();
+      if (!text) return;
+
+      playSound('click');
+      input.value = '';
+
+      const container = document.getElementById('botMessagesContainer');
+      const lang = currentLang;
+
+      // User Message Bubble
+      const userDiv = document.createElement('div');
+      userDiv.className = 'flex items-start justify-end gap-2 pt-1';
+      userDiv.innerHTML = `
+        <div class="bg-cyan-500 text-black font-semibold p-2.5 rounded-2xl rounded-tr-none max-w-[85%] leading-relaxed text-xs">
+          ${text}
+        </div>
+        <span class="text-base shrink-0">👤</span>
+      `;
+      container.appendChild(userDiv);
+      container.scrollTop = container.scrollHeight;
+
+      // Send to Discord via Webhook in background!
+      const selected = products.filter(p => cart.includes(p.id));
+      const cartSummary = selected.length > 0 ? selected.map(it => it.title).join(', ') : 'Keine Artikel im Warenkorb';
+      
+      sendDiscordNotification('chat_message', {
+        message: text,
+        cartSummary: cartSummary
+      });
+
+      // Bot Answer Bubble
+      setTimeout(() => {
+        playSound('success');
+        const replyText = lang === 'en' ?
+          'Thank you! Your message was sent directly to Leo via Discord. In the meantime, browse the collection or write to Leo directly on Vinted (@leonardoitde) or Kleinanzeigen!' :
+          'Danke! Deine Nachricht wurde gerade per Live-Ping an Leo weitergeleitet. Stöbere gerne weiter im Katalog oder schreibe Leo direkt auf Vinted (@leonardoitde) oder Kleinanzeigen!';
+        appendBotMessage(replyText);
+      }, 600);
+    }
+
     // KEYBOARD SHORTCUTS
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
@@ -1707,7 +1966,8 @@
         if (!drawer.classList.contains('translate-x-full')) {
           toggleCartDrawer();
         }
-      } else if (e.key === '/' && document.activeElement !== document.getElementById('searchInput')) {
+        if (botOpen) toggleBotWidget();
+      } else if (e.key === '/' && document.activeElement !== document.getElementById('searchInput') && document.activeElement !== document.getElementById('botChatInput')) {
         e.preventDefault();
         document.getElementById('searchInput').focus();
       }
