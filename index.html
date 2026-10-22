@@ -131,30 +131,26 @@
   
   <!-- Live Cyber Marquee Ticker -->
   <div class="bg-gradient-to-r from-purple-950 via-slate-950 to-cyan-950 border-b border-cyan-500/20 py-1.5 overflow-hidden text-[10px] sm:text-[11px] font-black tracking-wider text-cyan-300 select-none">
-    <div class="inline-flex whitespace-nowrap animate-marquee items-center gap-6">
-      <span>⚡ OTAKU VAULT SAMMLUNGSAUFLÖSUNG</span>
-      <span>•</span>
-      <span>📚 TOP-ZUSTAND • WEISSE BUCHSCHNITTE • NICHTRAUCHER</span>
-      <span>•</span>
-      <span>🎁 AB 3 ARTIKELN 0 € GRATIS-VERSAND</span>
-      <span>•</span>
-      <span>📦 SCHNELLER VERSICHERTER DHL-VERSAND MIT TRACKING</span>
-      <span>•</span>
-      <span>⭐ KAUF ÜBER VINTED (@leonardoitde) ODER KLEINANZEIGEN (Leo)</span>
-      <span>•</span>
-      <span>🔥 BIS ZU -66% GEGENÜBER NEUPREIS</span>
-      <span>•</span>
-      <span>⚡ OTAKU VAULT SAMMLUNGSAUFLÖSUNG</span>
-      <span>•</span>
-      <span>📚 TOP-ZUSTAND • WEISSE BUCHSCHNITTE • NICHTRAUCHER</span>
-      <span>•</span>
-      <span>🎁 AB 3 ARTIKELN 0 € GRATIS-VERSAND</span>
-      <span>•</span>
-      <span>📦 SCHNELLER VERSICHERTER DHL-VERSAND MIT TRACKING</span>
-      <span>•</span>
-      <span>⭐ KAUF ÜBER VINTED (@leonardoitde) ODER KLEINANZEIGEN (Leo)</span>
-      <span>•</span>
-      <span>🔥 BIS ZU -66% GEGENÜBER NEUPREIS</span>
+    <div class="inline-flex whitespace-nowrap animate-marquee items-center gap-6 tracking-widest text-[10px] uppercase font-bold text-slate-300">
+      <span class="text-cyan-400 font-extrabold">OTAKU VAULT • SAMMLUNGSAUFLÖSUNG</span>
+      <span class="text-slate-600">|</span>
+      <span>100% WEISSE BUCHSCHNITTE • TIERFREIER NICHTRAUCHERHAUSHALT</span>
+      <span class="text-slate-600">|</span>
+      <span class="text-emerald-400 font-extrabold">AB 3 ARTIKELN 0,00 € GRATIS-VERSAND</span>
+      <span class="text-slate-600">|</span>
+      <span>VERSICHERTER DHL-VERSAND MIT SENDUNGSVERFOLGUNG</span>
+      <span class="text-slate-600">|</span>
+      <span class="text-[#09B1BA] font-extrabold">VINTED: @leonardoitde</span>
+      <span class="text-slate-600">|</span>
+      <span class="text-emerald-400 font-extrabold">KLEINANZEIGEN: LEO</span>
+      <span class="text-slate-600">|</span>
+      <span>BIS ZU -66% GEGENÜBER BUCHHANDEL</span>
+      <span class="text-slate-600">|</span>
+      <span class="text-cyan-400 font-extrabold">OTAKU VAULT • SAMMLUNGSAUFLÖSUNG</span>
+      <span class="text-slate-600">|</span>
+      <span>100% WEISSE BUCHSCHNITTE • TIERFREIER NICHTRAUCHERHAUSHALT</span>
+      <span class="text-slate-600">|</span>
+      <span class="text-emerald-400 font-extrabold">AB 3 ARTIKELN 0,00 € GRATIS-VERSAND</span>
     </div>
   </div>
 
@@ -162,7 +158,7 @@
   <div class="bg-slate-900/95 border-b border-cyan-800/40 text-center py-2 px-3 text-[11px] sm:text-xs font-semibold text-slate-300 flex items-center justify-between max-w-7xl mx-auto flex-wrap gap-2 relative z-30">
     <div class="flex items-center gap-2 flex-wrap">
       <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wide border border-cyan-500/30">
-        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> <span data-i18n="nav_official">OFFIZIELLER VERKAUF</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> <span data-i18n="nav_official">VERIFIED VAULT</span>
       </span>
       <span class="text-slate-400 hidden sm:inline" data-i18n="nav_secure">Sicher kaufen über:</span>
       <div class="inline-flex items-center gap-1.5">
@@ -186,7 +182,7 @@
       </div>
 
       <button onclick="toggleAudio()" id="audioBtn" title="Cyber Sound FX" class="p-1 px-2 rounded-lg bg-slate-950 border border-slate-700 hover:border-cyan-500 text-slate-400 hover:text-cyan-300 transition-all text-xs flex items-center gap-1">
-        <span id="audioIcon">🔇</span>
+        <span id="audioIcon" class="text-[11px] font-mono font-bold tracking-wider text-slate-400">AUDIO OFF</span>
       </button>
     </div>
   </div>
@@ -289,10 +285,32 @@
           </div>
         </div>
 
+        <!-- 3-Step Visual Buyer Guide -->
+        <div class="glass-panel rounded-2xl p-3 sm:p-4 border border-cyan-500/30 mb-4 bg-slate-950/70">
+          <div class="text-[11px] font-extrabold text-cyan-300 uppercase tracking-wider mb-2.5 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span data-i18n="step_guide_title">KAUFEN IN 3 EINFACHEN SCHRITTEN:</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
+            <div class="flex items-center gap-3 bg-slate-900/90 p-3 rounded-xl border border-slate-800">
+              <span class="px-2 py-1 rounded-md bg-cyan-500/20 text-cyan-400 font-mono font-extrabold text-xs shrink-0 border border-cyan-500/30">01</span>
+              <span class="text-slate-300 font-medium leading-snug" data-i18n="step_1">Wunsch-Titel auswählen (+ In mein Paket)</span>
+            </div>
+            <div class="flex items-center gap-3 bg-slate-900/90 p-3 rounded-xl border border-slate-800">
+              <span class="px-2 py-1 rounded-md bg-emerald-500/20 text-emerald-400 font-mono font-extrabold text-xs shrink-0 border border-emerald-500/30">02</span>
+              <span class="text-slate-300 font-medium leading-snug" data-i18n="step_2">Vinted oder Kleinanzeigen wählen</span>
+            </div>
+            <div class="flex items-center gap-3 bg-slate-900/90 p-3 rounded-xl border border-slate-800">
+              <span class="px-2 py-1 rounded-md bg-indigo-500/20 text-indigo-400 font-mono font-extrabold text-xs shrink-0 border border-indigo-500/30">03</span>
+              <span class="text-slate-300 font-medium leading-snug" data-i18n="step_3">Anfrage senden & versicherten DHL-Versand erhalten!</span>
+            </div>
+          </div>
+        </div>
+
         <!-- Quick Mobile Jump Anchor -->
         <div class="sm:hidden mb-2">
           <a href="#catalogAnchor" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 border border-cyan-500/40 text-cyan-300 font-bold text-xs flex items-center justify-center gap-1.5 active:bg-slate-800">
-            <span data-i18n="jump_catalog">👇 Direkt zu allen 30 Artikeln springen</span>
+            <span data-i18n="jump_catalog">Alle 30 Artikel ansehen ↓</span>
           </a>
         </div>
       </div>
@@ -346,7 +364,7 @@
     <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-cyan-500/30">
       <div class="flex items-center justify-between mb-2 flex-wrap gap-1.5">
         <div class="flex items-center gap-1.5">
-          <span class="text-sm sm:text-base">🚀</span>
+          <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
           <span id="progressTitle" class="text-xs sm:text-sm font-black text-white font-display">
             Füge Artikel hinzu für Rabatte & Gratis-Versand:
           </span>
@@ -363,9 +381,9 @@
 
       <!-- Stage Milestones -->
       <div class="grid grid-cols-3 text-[10px] sm:text-[11px] font-bold text-slate-400 mt-2 text-center">
-        <div id="stage1" class="text-slate-500 transition-colors">⚪ 1. Artikel</div>
-        <div id="stage2" class="text-slate-500 transition-colors">🟡 2. Artikel: -5%</div>
-        <div id="stage3" class="text-slate-500 transition-colors">🟢 3+ : 0 € Versand</div>
+        <div id="stage1" class="text-slate-500 transition-colors">1. Artikel</div>
+        <div id="stage2" class="text-slate-500 transition-colors">2. Artikel: -5% Rabatt</div>
+        <div id="stage3" class="text-slate-500 transition-colors">3+ Artikel: 0,00 € Versand</div>
       </div>
     </div>
   </section>
@@ -375,38 +393,46 @@
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3.5">
       
       <!-- Card 1: 100% Originale -->
-      <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-emerald-500/30 flex items-start gap-2.5">
-        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 text-base sm:text-xl">🛡️</div>
+      <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-emerald-500/30 flex items-start gap-3">
+        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/30">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
         <div>
           <h4 class="text-[11px] sm:text-xs font-black text-white uppercase tracking-wider font-display" data-i18n="trust_orig">100% Originale</h4>
-          <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug" data-i18n="trust_orig_desc">Garantierte Markenware. Keine China-Bootlegs!</p>
+          <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug" data-i18n="trust_orig_desc">Garantierte Markenware & Erstauflagen. Keine Bootlegs!</p>
         </div>
       </div>
 
       <!-- Card 2: Rauchfrei & Weiß -->
-      <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-cyan-500/30 flex items-start gap-2.5">
-        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0 text-base sm:text-xl">🚭</div>
+      <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-cyan-500/30 flex items-start gap-3">
+        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0 border border-cyan-500/30">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.286L13 21l-2.286-6.857L5 12l5.714-2.286L13 3z"/></svg>
+        </div>
         <div>
           <h4 class="text-[11px] sm:text-xs font-black text-white uppercase tracking-wider font-display" data-i18n="trust_smoke">Nichtraucher</h4>
-          <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug" data-i18n="trust_smoke_desc">Weiße Buchschnitte, kein Nikotin- oder Rauchgeruch.</p>
+          <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug" data-i18n="trust_smoke_desc">Makellos weiße Buchschnitte, tierfreier Sammlerhaushalt.</p>
         </div>
       </div>
 
       <!-- Card 3: DHL Versand & Polsterung -->
-      <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-purple-500/30 flex items-start gap-2.5">
-        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0 text-base sm:text-xl">📦</div>
+      <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-purple-500/30 flex items-start gap-3">
+        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/30">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+        </div>
         <div>
           <h4 class="text-[11px] sm:text-xs font-black text-white uppercase tracking-wider font-display" data-i18n="trust_ship">DHL Tracking</h4>
-          <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug" data-i18n="trust_ship_desc">Dicke Luftpolsterung & stabiler DHL-Karton am selben Tag.</p>
+          <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug" data-i18n="trust_ship_desc">Dicke Luftpolsterung & stabiler DHL-Karton am selben Werktag.</p>
         </div>
       </div>
 
       <!-- Card 4: Käuferschutz & Abholung -->
-      <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-amber-500/30 flex items-start gap-2.5">
-        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 text-base sm:text-xl">🤝</div>
+      <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-amber-500/30 flex items-start gap-3">
+        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/30">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
         <div>
           <h4 class="text-[11px] sm:text-xs font-black text-white uppercase tracking-wider font-display" data-i18n="trust_buyer">Käuferschutz</h4>
-          <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug" data-i18n="trust_buyer_desc">Vinted-System, Kleinanzeigen oder Bar bei Abholung.</p>
+          <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug" data-i18n="trust_buyer_desc">Offizielles Vinted-System, Kleinanzeigen oder Bar bei Abholung.</p>
         </div>
       </div>
 
@@ -546,19 +572,18 @@
   <!-- ======================================================== -->
   <!-- INTERACTIVE OTAKU CONCIERGE BOT (FLOATING LIVE ASSISTANT) -->
   <!-- ======================================================== -->
-  <!-- Bot Launcher Button -->
-  <div id="botWidgetTrigger" onclick="toggleBotWidget()" class="fixed right-3.5 bottom-20 sm:bottom-6 z-40 cursor-pointer flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-slate-900/95 border border-cyan-500/60 shadow-[0_0_20px_rgba(6,182,212,0.35)] hover:scale-105 active:scale-95 transition-all animate-glow-ring">
-    <div class="relative">
-      <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 absolute -top-0.5 -right-0.5 border border-black animate-ping"></span>
-      <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 absolute -top-0.5 -right-0.5 border border-black"></span>
-      <span class="text-xl">🤖</span>
+  <!-- Bot Launcher Button (Kira AI Concierge) -->
+  <div id="botWidgetTrigger" onclick="toggleBotWidget()" class="fixed right-3.5 bottom-20 sm:bottom-6 z-40 cursor-pointer flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-slate-950/95 border border-cyan-500/60 shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:scale-105 active:scale-95 transition-all animate-glow-ring backdrop-blur-md">
+    <div class="relative w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-400 via-indigo-500 to-purple-600 flex items-center justify-center font-display font-black text-black text-xs shadow-sm">
+      <span>K</span>
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 absolute -bottom-0.5 -right-0.5 border-2 border-slate-950"></span>
     </div>
     <div class="text-left leading-tight hidden sm:block">
-      <div class="text-xs font-black text-white flex items-center gap-1">
-        <span>Otaku Bot</span>
-        <span class="text-[9px] px-1 py-0.2 rounded bg-cyan-950 text-cyan-300 border border-cyan-700/60 font-mono">LIVE</span>
+      <div class="text-xs font-black text-white flex items-center gap-1.5 font-display tracking-wide">
+        <span>Kira AI</span>
+        <span class="text-[9px] px-1.5 py-0.2 rounded bg-cyan-950/80 text-cyan-300 border border-cyan-700/60 font-mono font-bold">ONLINE</span>
       </div>
-      <span class="text-[10px] text-cyan-300 font-medium" data-i18n="bot_subtitle">Frage an Leo oder Hilfe</span>
+      <span class="text-[10px] text-slate-400 font-medium block" data-i18n="bot_subtitle">Leo's Sammlungs-Beraterin</span>
     </div>
   </div>
 
@@ -566,44 +591,47 @@
   <div id="botChatPanel" class="fixed right-3 sm:right-6 bottom-20 sm:bottom-20 w-[92vw] sm:w-[380px] h-[480px] bg-slate-950/95 border border-cyan-500/50 rounded-2xl sm:rounded-3xl shadow-2xl z-50 flex flex-col justify-between overflow-hidden transform scale-95 opacity-0 pointer-events-none transition-all duration-200">
     
     <!-- Bot Header -->
-    <div class="bg-slate-900 border-b border-slate-800 p-3 flex items-center justify-between">
+    <div class="bg-slate-900/95 border-b border-slate-800 p-3.5 flex items-center justify-between">
       <div class="flex items-center gap-2.5">
-        <div class="w-8 h-8 rounded-xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center text-lg border border-cyan-500/40">
-          🤖
+        <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-400 via-indigo-500 to-purple-600 text-black flex items-center justify-center font-black font-display text-xs shadow-md">
+          K
         </div>
         <div>
-          <h4 class="text-xs font-black text-white flex items-center gap-1.5 font-display">
-            <span>Otaku Concierge</span>
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          <h4 class="text-xs font-black text-white flex items-center gap-1.5 font-display tracking-wide">
+            <span>Kira</span>
+            <span class="text-[9px] px-1 py-0.2 rounded bg-emerald-950 text-emerald-400 border border-emerald-700/60 font-mono">AI LIVE</span>
           </h4>
-          <span class="text-[10px] text-slate-400 block" data-i18n="bot_status">Online • Leos Live-Assistent</span>
+          <span class="text-[10px] text-slate-400 block" data-i18n="bot_status">Leo's Sammlungs-Assistentin</span>
         </div>
       </div>
-      <button onclick="toggleBotWidget()" class="text-slate-400 hover:text-white p-1 text-xl leading-none">✕</button>
+      <button onclick="toggleBotWidget()" class="text-slate-400 hover:text-white p-1 text-xl leading-none transition-colors">✕</button>
     </div>
 
     <!-- Bot Messages Area -->
     <div id="botMessagesContainer" class="flex-1 p-3 overflow-y-auto space-y-2.5 text-xs">
       <div class="flex items-start gap-2">
-        <span class="text-base shrink-0">🤖</span>
+        <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-cyan-400 to-indigo-500 text-black flex items-center justify-center font-black text-[10px] shrink-0 font-display">K</div>
         <div class="bg-slate-900 border border-slate-800 text-slate-200 p-2.5 rounded-2xl rounded-tl-none max-w-[85%] leading-relaxed" id="botWelcomeMsg" data-i18n="bot_welcome">
-          Konnichiwa! 👋 Ich bin Leos Sammlungs-Assistent. Ich helfe dir beim Zusammenstellen deiner Manga & Figuren oder leite Fragen direkt an Leo weiter!
+          Hi! Ich bin Kira, die offizielle Sammlungs-Assistentin von Leo. Ich kenne jeden Band, jede Figur und alle Bundles auswendig. Frag mich gerne nach Empfehlungen, Rabatten oder Details zu bestimmten Reihen!
         </div>
       </div>
 
-      <!-- Quick Action Chips -->
+      <!-- Quick Action Chips (Kira AI Suggestions) -->
       <div class="flex flex-wrap gap-1.5 pt-1">
-        <button onclick="handleBotQuickAction('bestseller')" class="px-2.5 py-1 rounded-lg bg-cyan-950/80 border border-cyan-700/60 text-cyan-300 text-[10px] font-bold active:scale-95">
-          ⚡ Bestseller zeigen
+        <button onclick="handleBotQuickAction('bestseller')" class="px-2.5 py-1 rounded-lg bg-cyan-950/80 hover:bg-cyan-900/80 border border-cyan-700/60 text-cyan-300 text-[10px] font-bold transition-colors active:scale-95">
+          Top-Empfehlungen
         </button>
-        <button onclick="handleBotQuickAction('bundles')" class="px-2.5 py-1 rounded-lg bg-purple-950/80 border border-purple-700/60 text-purple-300 text-[10px] font-bold active:scale-95">
-          🎁 Große Sparpakete
+        <button onclick="handleBotQuickAction('bundles')" class="px-2.5 py-1 rounded-lg bg-purple-950/80 hover:bg-purple-900/80 border border-purple-700/60 text-purple-300 text-[10px] font-bold transition-colors active:scale-95">
+          Sparpakete & Rabatte
         </button>
-        <button onclick="handleBotQuickAction('shipping')" class="px-2.5 py-1 rounded-lg bg-emerald-950/80 border border-emerald-700/60 text-emerald-300 text-[10px] font-bold active:scale-95">
-          🚚 Gratis-Versand Info
+        <button onclick="handleBotQuickAction('figures')" class="px-2.5 py-1 rounded-lg bg-indigo-950/80 hover:bg-indigo-900/80 border border-indigo-700/60 text-indigo-300 text-[10px] font-bold transition-colors active:scale-95">
+          Figuren-Highlights
         </button>
-        <button onclick="handleBotQuickAction('test_webhook')" class="px-2.5 py-1 rounded-lg bg-amber-950/80 border border-amber-600/60 text-amber-300 text-[10px] font-bold active:scale-95 flex items-center gap-1">
-          🔔 Discord-Ping testen
+        <button onclick="handleBotQuickAction('condition')" class="px-2.5 py-1 rounded-lg bg-emerald-950/80 hover:bg-emerald-900/80 border border-emerald-700/60 text-emerald-300 text-[10px] font-bold transition-colors active:scale-95">
+          Zustand & Versand
+        </button>
+        <button onclick="handleBotQuickAction('test_webhook')" class="px-2.5 py-1 rounded-lg bg-amber-950/80 hover:bg-amber-900/80 border border-amber-600/60 text-amber-300 text-[10px] font-bold transition-colors active:scale-95">
+          Discord-Ping testen
         </button>
       </div>
     </div>
@@ -627,9 +655,7 @@
     <div>
       <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-3">
         <div class="flex items-center gap-2.5">
-          <div class="w-9 h-9 rounded-xl bg-cyan-500/20 border border-cyan-500/50 flex items-center justify-center text-cyan-400 text-lg">
-            🛍️
-          </div>
+          <div class="w-9 h-9 rounded-xl bg-cyan-500/20 border border-cyan-500/50 flex items-center justify-center text-cyan-400"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg></div>
           <div>
             <h3 class="text-base sm:text-lg font-bold text-white font-display" data-i18n="cart_title">Dein Wunsch-Paket</h3>
             <span class="text-[11px] text-slate-400 font-semibold" data-i18n="cart_seller">Verkauf durch Leo Ruska</span>
@@ -676,6 +702,28 @@
         <div class="flex justify-between text-sm sm:text-base font-extrabold text-white border-t border-slate-800/80 pt-2">
           <span data-i18n="cart_total">Gesamtpreis:</span>
           <span id="finalTotalDisplay" class="text-xl sm:text-2xl text-emerald-400 font-display">0,00 €</span>
+        </div>
+      </div>
+
+      <!-- Price Offer Accordion -->
+      <div class="mb-3">
+        <button type="button" onclick="toggleOfferBox()" class="w-full py-2 px-3 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/40 text-amber-300 font-bold text-xs flex items-center justify-between transition-all active:scale-[0.99]">
+          <span class="flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg> <span data-i18n="offer_btn">Preisvorschlag an Leo senden</span>
+          </span>
+          <span id="offerChevron" class="text-xs transition-transform">▼</span>
+        </button>
+
+        <div id="offerBoxContainer" class="hidden mt-2 p-3 rounded-xl bg-slate-900 border border-amber-500/30 space-y-2">
+          <p class="text-[11px] text-slate-300 font-semibold" data-i18n="offer_title">Verhandeln & Preisvorschlag machen:</p>
+          <div class="flex items-center gap-1.5">
+            <input type="number" id="offerPriceInput" placeholder="Wunschpreis in € (z.B. 42)" 
+                   class="flex-1 px-3 py-1.5 bg-slate-950 border border-slate-700 rounded-lg text-slate-200 text-xs focus:outline-none focus:border-amber-400">
+            <button type="button" onclick="submitPriceOffer()" class="py-1.5 px-3 rounded-lg bg-amber-400 hover:bg-amber-300 text-black font-black text-xs transition-all active:scale-95">
+              <span data-i18n="offer_send_btn">Angebot senden</span>
+            </button>
+          </div>
+          <p id="offerFeedback" class="text-[10px] text-emerald-400 font-semibold hidden"></p>
         </div>
       </div>
 
@@ -726,8 +774,8 @@
   <div id="guideModalBackdrop" onclick="closeGuideModal()" class="fixed inset-0 bg-black/85 z-50 transition-opacity duration-200 opacity-0 pointer-events-none flex items-center justify-center p-3 sm:p-4">
     <div onclick="event.stopPropagation()" class="glass-panel-glow w-full max-w-lg rounded-2xl sm:rounded-3xl p-5 sm:p-8 relative transform scale-95 transition-transform duration-200 border border-cyan-500/50 text-center max-h-[92dvh] overflow-y-auto">
       
-      <div id="guideModalIcon" class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-tr from-cyan-400 to-emerald-400 text-black flex items-center justify-center text-xl sm:text-2xl font-black mx-auto mb-3 shadow-md">
-        ✓
+      <div id="guideModalIcon" class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-tr from-cyan-400 to-emerald-400 text-black flex items-center justify-center mx-auto mb-3 shadow-md">
+        <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
       </div>
 
       <span id="guideModalBadge" class="text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-cyan-400 bg-cyan-950/80 px-2.5 py-1 rounded-full border border-cyan-800/60 inline-block mb-2">
@@ -738,7 +786,20 @@
         So schickst du die Nachricht ab:
       </h3>
 
-      <div class="bg-slate-900 border border-slate-800 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-left space-y-2.5 text-xs text-slate-300 mb-4 sm:mb-6">
+      <!-- Copied Message Box with Manual Copy Button -->
+      <div class="bg-slate-900 border border-cyan-800/60 rounded-xl p-3 text-left mb-3">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="text-[10px] font-extrabold text-cyan-300 uppercase tracking-wider">Deine fertige Kaufanfrage:</span>
+          <button onclick="copyGuideMessageAgain()" id="guideManualCopyBtn" class="px-2.5 py-1 rounded-lg bg-cyan-500/20 hover:bg-cyan-500 hover:text-black border border-cyan-500/50 text-cyan-300 font-bold text-[10px] transition-all flex items-center gap-1 active:scale-95">
+            <svg class="w-3 h-3 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"/></svg> <span id="guideManualCopyText" data-i18n="guide_copy_again">Text nochmals kopieren</span>
+          </button>
+        </div>
+        <textarea id="guideMessageTextarea" readonly rows="3" 
+                  class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-slate-200 text-[11px] font-mono resize-none focus:outline-none select-all"></textarea>
+      </div>
+
+      <!-- Steps 1-2-3 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-left space-y-2 text-xs text-slate-300 mb-3">
         <div class="flex items-start gap-2.5">
           <span class="w-5 h-5 rounded-md bg-cyan-400 text-black font-black flex items-center justify-center shrink-0 text-xs">1</span>
           <div>
@@ -750,26 +811,37 @@
           <span class="w-5 h-5 rounded-md bg-emerald-400 text-black font-black flex items-center justify-center shrink-0 text-xs">2</span>
           <div>
             <strong class="text-white text-xs" data-i18n="guide_step2_title">Nachricht einfügen:</strong>
-            <p class="text-slate-400 text-[11px]" data-i18n="guide_step2_desc">Lange ins Textfeld tippen ➔ <span class="text-emerald-300 font-bold">„Einfügen“</span> wählen!</p>
+            <p class="text-slate-400 text-[11px]" data-i18n="guide_step2_desc">Rechtsklick oder langes Drücken ➔ <span class="text-emerald-300 font-bold">„Einfügen“</span> wählen & absenden!</p>
           </div>
         </div>
         <div class="flex items-start gap-2.5">
           <span class="w-5 h-5 rounded-md bg-indigo-400 text-black font-black flex items-center justify-center shrink-0 text-xs">3</span>
           <div>
             <strong class="text-white text-xs" data-i18n="guide_step3_title">Schnelle Bestätigung:</strong>
-            <p class="text-slate-400 text-[11px]" data-i18n="guide_step3_desc">Leo zieht deinen Rabatt & Gratis-Versand sofort ab!</p>
+            <p class="text-slate-400 text-[11px]" data-i18n="guide_step3_desc">Leo bestätigt deinen Deal sofort und bereitet das Paket vor.</p>
           </div>
         </div>
       </div>
 
-      <div class="flex flex-col sm:flex-row gap-2">
-        <a id="guideModalLink" href="https://www.vinted.de/items/10446687217-grosse-manga-sammlung-zu-verkaufen-viele-reihen" target="_blank" class="w-full py-3 px-4 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-black font-black text-xs flex items-center justify-center gap-1.5 active:scale-95">
-          <span id="guideModalLinkText">Zur Anzeige springen ↗</span>
-        </a>
-        <button onclick="closeGuideModal()" class="w-full sm:w-auto py-2.5 px-5 rounded-xl bg-slate-800 text-slate-300 font-bold text-xs active:bg-slate-700" data-i18n="guide_close">
-          Schließen
-        </button>
+      <!-- Live Reassurance Notice -->
+      <div class="p-2.5 rounded-xl bg-emerald-950/40 border border-emerald-800/60 text-emerald-300 text-[11px] font-bold flex items-center justify-center gap-2 mb-3">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping shrink-0"></span>
+        <span data-i18n="guide_waiting_leo"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse inline-block"></span> Leo wurde per Live-Push auf Discord benachrichtigt und wartet im Chat auf dich!</span>
       </div>
+
+      <!-- Dual Platform Quick Buttons -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-2">
+        <a id="guideModalVintedLink" href="https://www.vinted.de/items/10446687217-grosse-manga-sammlung-zu-verkaufen-viele-reihen" target="_blank" class="py-2.5 px-3.5 rounded-xl bg-[#09B1BA] hover:bg-[#089ea6] text-black font-black text-xs flex items-center justify-center gap-1.5 active:scale-95 shadow-md">
+          <span>Vinted Chat öffnen ↗</span>
+        </a>
+        <a id="guideModalKleinanzeigenLink" href="https://www.kleinanzeigen.de/s-anzeige/grosse-manga-sammlung-tokyo-ghoul-naruto-bleach-aot-mehr/3546136324-284-5655" target="_blank" class="py-2.5 px-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs flex items-center justify-center gap-1.5 active:scale-95 shadow-md">
+          <span>🟢 Kleinanzeigen öffnen ↗</span>
+        </a>
+      </div>
+
+      <button onclick="closeGuideModal()" class="w-full py-2 rounded-xl bg-slate-800 text-slate-400 hover:text-white font-bold text-xs active:bg-slate-700" data-i18n="guide_close">
+        Schließen
+      </button>
     </div>
   </div>
 
@@ -859,7 +931,20 @@
     // Multi-Language Dictionary
     const i18n = {
       de: {
-        nav_official: "OFFIZIELLER VERKAUF",
+        nav_official: "VERIFIED VAULT",
+        offer_btn: "💬 Preisvorschlag an Leo senden",
+        offer_title: "Verhandeln & Preisvorschlag machen:",
+        offer_placeholder: "Wunschpreis in € (z.B. 42)",
+        offer_send_btn: "🚀 Vorschlag an Leo senden",
+        offer_success: "Preisvorschlag gesendet! Leo hat dein Angebot erhalten.",
+        step_guide_title: "KAUFEN IN 3 EINFACHEN SCHRITTEN:",
+        step_1: "Wunsch-Titel auswählen (+ In mein Paket)",
+        step_2: "Vinted oder Kleinanzeigen wählen",
+        step_3: "Anfrage senden & versicherten DHL-Versand erhalten!",
+        guide_copy_again: "📋 Text nochmals kopieren",
+        guide_copied: "✅ In Zwischenablage kopiert!",
+        guide_waiting_leo: "<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse inline-block"></span> Leo wurde per Live-Push auf Discord benachrichtigt und wartet im Chat auf dich!",
+        
         nav_secure: "Sicher kaufen über:",
         seller_private: "PRIVATVERKAUF:",
         hero_title_2: "SAMMLUNGSAUFLÖSUNG",
@@ -868,7 +953,7 @@
         stat_figures: "Anime Figuren",
         stat_shipping: "Gratis-Versand (ab 3)",
         stat_savings: "Max. Ersparnis",
-        jump_catalog: "👇 Direkt zu allen 30 Artikeln springen",
+        jump_catalog: "Alle 30 Artikel ansehen ↓",
         dual_checkout_title: "Dual-Checkout Hub",
         dual_checkout_status: "BEIDE ONLINE",
         dual_checkout_prompt: "Kaufe sicher über deine Plattform:",
@@ -1128,7 +1213,8 @@
             { name: `📦 Gewählte Artikel (${payloadData.items.length})`, value: payloadData.items.map(it => `• ${it.title} (${it.dealPrice.toFixed(2)} €)`).join('\n').slice(0, 1024) },
             { name: '🚚 Versand', value: payloadData.items.length >= 3 ? '✅ 0,00 € Gratis-Versand' : '📦 5,50 € DHL Paket', inline: true },
             { name: '👤 Käufer-Name', value: buyerName ? ('@' + buyerName) : 'Nicht angegeben', inline: true },
-            { name: '🌍 Info', value: `${lang.toUpperCase()} • ${isMobile ? '📱 Smartphone' : '💻 Desktop'}`, inline: true }
+            { name: '🌍 Info', value: `${lang.toUpperCase()} • ${isMobile ? '📱 Smartphone' : '💻 Desktop'}`, inline: true },
+            { name: '🔗 Direktlink zum Chat', value: isKleinanzeigen ? `[🟢 Kleinanzeigen Anzeige öffnen](${kleinanzeigenListingUrl})` : `[Vinted Inserat öffnen](${vintedListingUrl})`, inline: false }
           ],
           footer: { text: 'Otaku Vault Live Notification Bot • Checke dein Postfach!' },
           timestamp: new Date().toISOString()
@@ -1173,6 +1259,22 @@
           footer: { text: 'otakuvault.de • Bot Forwarding System' },
           timestamp: new Date().toISOString()
         };
+      } else if (type === 'offer') {
+        embed = {
+          title: '🏷️ Neuer Preisvorschlag von einem Käufer!',
+          description: `Ein Käufer möchte verhandeln und hat einen Preisvorschlag geschickt:`,
+          color: 0xF59E0B,
+          fields: [
+            { name: '💵 Angebotener Wunschpreis', value: `**${payloadData.offerPrice} €**`, inline: true },
+            { name: '📊 Regulärer Bundle-Preis', value: `${payloadData.regularTotal}`, inline: true },
+            { name: '👤 Käufer-Kontakt', value: payloadData.buyerName ? `@${payloadData.buyerName}` : (buyerName ? `@${buyerName}` : 'Nicht angegeben'), inline: true },
+            { name: `📦 Gewählte Artikel (${payloadData.items.length})`, value: payloadData.items.map(it => `• ${it.title} (${it.dealPrice.toFixed(2)} €)`).join('
+').slice(0, 1024), inline: false },
+            { name: '🔗 Schnellantwort', value: `[💬 Vinted Chat öffnen](${vintedListingUrl}) • [🟢 Kleinanzeigen öffnen](${kleinanzeigenListingUrl})`, inline: false }
+          ],
+          footer: { text: 'Otaku Vault Price Negotiation • Schnelle Antwort erhöht Abschlussrate!' },
+          timestamp: new Date().toISOString()
+        };
       } else if (type === 'test_ping') {
         embed = {
           title: '🔔 Live-Test: Discord Webhook ist 100% aktiv & online!',
@@ -1181,7 +1283,8 @@
           fields: [
             { name: '🟢 Status', value: 'Verbindung Online & Aktiv', inline: true },
             { name: '🌐 Domain', value: 'otakuvault.de', inline: true },
-            { name: '📱 Gerät', value: isMobile ? '📱 Smartphone' : '💻 Desktop', inline: true }
+            { name: '📱 Gerät', value: isMobile ? '📱 Smartphone' : '💻 Desktop', inline: true },
+            { name: '🔗 Deine Kanäle', value: `[Vinted](${vintedProfileUrl}) • [Kleinanzeigen](${kleinanzeigenListingUrl})`, inline: false }
           ],
           footer: { text: 'Otaku Vault Notification Engine • 100% Funktional' },
           timestamp: new Date().toISOString()
@@ -1203,6 +1306,75 @@
     }
 
     // LANGUAGE SWITCHER
+    
+    let lastCopiedMessage = '';
+
+    function toggleOfferBox() {
+      playSound('click');
+      const box = document.getElementById('offerBoxContainer');
+      const chevron = document.getElementById('offerChevron');
+      if (box.classList.contains('hidden')) {
+        box.classList.remove('hidden');
+        chevron.style.transform = 'rotate(180deg)';
+        const input = document.getElementById('offerPriceInput');
+        if (input) input.focus();
+      } else {
+        box.classList.add('hidden');
+        chevron.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    function submitPriceOffer() {
+      const input = document.getElementById('offerPriceInput');
+      const offerPrice = input.value.trim();
+      if (!offerPrice || isNaN(offerPrice) || Number(offerPrice) <= 0) {
+        showToast(currentLang === 'en' ? 'Invalid Price' : 'Ungültiger Preis', currentLang === 'en' ? 'Please enter a valid amount in €.' : 'Bitte gib einen gültigen Wunschbetrag in € ein.');
+        return;
+      }
+
+      const selected = products.filter(p => cart.includes(p.id));
+      if (selected.length === 0) {
+        showToast(currentLang === 'en' ? 'Empty bundle' : 'Paket ist leer', currentLang === 'en' ? 'Please select at least one item first.' : 'Wähle zuerst mindestens einen Artikel aus.');
+        return;
+      }
+
+      playSound('success');
+      triggerConfetti();
+
+      const regularTotal = document.getElementById('finalTotalDisplay') ? document.getElementById('finalTotalDisplay').innerText : '0,00 €';
+      const buyerName = document.getElementById('buyerUsernameInput') ? document.getElementById('buyerUsernameInput').value.trim() : '';
+
+      sendDiscordNotification('offer', {
+        offerPrice: Number(offerPrice).toFixed(2),
+        regularTotal: regularTotal,
+        buyerName: buyerName,
+        items: selected
+      });
+
+      const fb = document.getElementById('offerFeedback');
+      fb.classList.remove('hidden');
+      fb.innerText = currentLang === 'en' ? 
+        `✅ Offer of ${Number(offerPrice).toFixed(2)} € sent to Leo! Please confirm it in the chat.` :
+        `✅ Preisvorschlag von ${Number(offerPrice).toFixed(2)} € an Leo gesendet! Bitte bestätige die Anfrage kurz im Chat.`;
+
+      input.value = '';
+      showToast(currentLang === 'en' ? 'Offer sent!' : 'Preisvorschlag gesendet!', currentLang === 'en' ? `Leo received your offer of ${Number(offerPrice).toFixed(2)} €.` : `Leo hat dein Angebot von ${Number(offerPrice).toFixed(2)} € erhalten.`);
+    }
+
+    function copyGuideMessageAgain() {
+      if (!lastCopiedMessage) return;
+      playSound('click');
+      copyTextToClipboard(lastCopiedMessage).then(() => {
+        const btnText = document.getElementById('guideManualCopyText');
+        if (btnText) {
+          btnText.innerText = currentLang === 'en' ? '✅ Copied!' : '✅ Kopiert!';
+          setTimeout(() => {
+            btnText.innerText = currentLang === 'en' ? '📋 Copy message again' : '📋 Text nochmals kopieren';
+          }, 2500);
+        }
+      });
+    }
+
     function setLanguage(lang) {
       currentLang = lang;
       try { localStorage.setItem('ov_lang', lang); } catch (e) {}
@@ -1349,7 +1521,7 @@
                 <div class="grid grid-cols-2 gap-1.5">
                   <button onclick="instantVintedInquiry('${p.id}')" 
                           class="py-2 px-2 rounded-xl font-bold text-[11px] text-[#09B1BA] bg-[#09B1BA]/10 active:bg-[#09B1BA]/25 border border-[#09B1BA]/40 flex items-center justify-center gap-1">
-                    <span>⚡ Vinted</span>
+                    <span>Vinted</span>
                   </button>
                   <button onclick="instantKleinanzeigenInquiry('${p.id}')" 
                           class="py-2 px-2 rounded-xl font-bold text-[11px] text-emerald-400 bg-emerald-500/10 active:bg-emerald-500/25 border border-emerald-500/40 flex items-center justify-center gap-1">
@@ -1380,7 +1552,7 @@
       } else {
         modalImg.innerHTML = `
           <div class="text-center p-3">
-            <span class="text-2xl mb-1 block">💌</span>
+            <svg class="w-8 h-8 text-pink-400 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
             <span class="text-xs font-bold text-pink-300">${lang === 'en' ? 'Shojo Romance 4-in-1 Bundle' : 'Shojo Romance 4-in-1 Paket'}</span>
           </div>
         `;
@@ -1569,13 +1741,13 @@
       const s3 = document.getElementById('stage3');
 
       if (lang === 'en') {
-        s1.innerText = '⚪ 1st Item';
-        s2.innerText = '🟡 2 Items: -5%';
+        s1.innerText = '1st Item';
+        s2.innerText = '2 Items (-5%)';
         s3.innerText = '🟢 3+ : Free Ship';
       } else {
-        s1.innerText = '⚪ 1. Artikel';
-        s2.innerText = '🟡 2. Artikel: -5%';
-        s3.innerText = '🟢 3+ : 0 € Versand';
+        s1.innerText = '1. Artikel';
+        s2.innerText = '2. Artikel: -5% Rabatt';
+        s3.innerText = '3+ Artikel: 0,00 € Versand';
       }
 
       if (count === 0) {
@@ -1595,14 +1767,14 @@
       } else if (count === 2) {
         progressBar.style.width = '66%';
         progressBadge.innerText = lang === 'en' ? '2 of 3 items' : '2 von 3 Artikeln';
-        progressTitle.innerText = lang === 'en' ? '🎉 5% discount active! Add 1 more for free shipping!' : '🎉 5% Rabatt aktiv! Noch 1 für Gratis-Versand!';
+        progressTitle.innerText = lang === 'en' ? '5% Paket-Rabatt aktiv! Add 1 more for free shipping!' : '🎉 5% Rabatt aktiv! Noch 1 für Gratis-Versand!';
         s1.className = 'text-cyan-400';
         s2.className = 'text-amber-400 font-extrabold';
         s3.className = 'text-slate-400';
       } else {
         progressBar.style.width = '100%';
         progressBadge.innerText = count + (lang === 'en' ? ' in bundle' : ' im Paket');
-        progressTitle.innerText = lang === 'en' ? '🔥 0 € FREE DHL SHIPPING UNLOCKED!' : '🔥 0 € GRATIS DHL-VERSAND AKTIV!';
+        progressTitle.innerText = lang === 'en' ? '0,00 € GRATIS-VERSAND FREIGESCHALTET!' : '🔥 0 € GRATIS DHL-VERSAND AKTIV!';
         s1.className = 'text-cyan-400';
         s2.className = 'text-amber-400';
         s3.className = 'text-emerald-400 font-extrabold';
@@ -1725,7 +1897,7 @@
         showToast('Info', 'Opening Vinted...');
       });
 
-      openGuideModal('vinted');
+      openGuideModal('vinted', msg);
     }
 
     function copyAndOpenKleinanzeigen() {
@@ -1757,7 +1929,7 @@
         showToast('Info', 'Opening Kleinanzeigen...');
       });
 
-      openGuideModal('kleinanzeigen');
+      openGuideModal('kleinanzeigen', msg);
     }
 
     // SINGLE-ITEM INSTANT INQUIRY
@@ -1789,7 +1961,7 @@
         showToast('Info', 'Opening Vinted...');
       });
 
-      openGuideModal('vinted');
+      openGuideModal('vinted', msg);
     }
 
     function instantKleinanzeigenInquiry(id) {
@@ -1819,7 +1991,7 @@
         showToast('Info', 'Opening Kleinanzeigen...');
       });
 
-      openGuideModal('kleinanzeigen');
+      openGuideModal('kleinanzeigen', msg);
     }
 
     // GUIDANCE MODAL
@@ -1887,31 +2059,229 @@
 
     function handleBotQuickAction(action) {
       playSound('click');
-      const container = document.getElementById('botMessagesContainer');
       const lang = currentLang;
 
       if (action === 'bestseller') {
         setCategory('manga_hero');
-        appendBotMessage(lang === 'en' ? 'Here are the top Manga Bestsellers! Attack on Titan (1–34 Complete), Chainsaw Man, Haikyuu, Naruto, Vagabond...' : 'Hier sind alle 8 Bestseller! Attack on Titan (1–34 komplett), Chainsaw Man, Haikyuu, Naruto, Vagabond und mehr sind jetzt im Katalog aktiv!');
+        const reply = lang === 'en' ?
+          'Here are our top Manga Bestsellers! Attack on Titan (1–34 Complete), Chainsaw Man, Haikyuu, Berserk and Tokyo Ghoul are the biggest fan favorites right now:' :
+          'Hier sind unsere absoluten Bestseller! Attack on Titan (1–34 komplett), Chainsaw Man, Haikyuu, Berserk und Tokyo Ghoul sind aktuell die beliebtesten Reihen:';
+        appendBotMessage(reply, ['aot', 'csm', 'berserk']);
       } else if (action === 'bundles') {
-        appendBotMessage(lang === 'en' ? 'Best deals right now: 1. Attack on Titan complete (-38%), 2. Haikyuu 29 vols (-38%), 3. Shojo Romance 4-in-1 (-66%), 4. All 9 Desk Figures for 59 €!' : 'Top Sparpakete: 1. Attack on Titan komplett (-38%), 2. Haikyuu 29 Bände (-38%), 3. Shojo 4-in-1 Konvolut für 20 € (-66%), 4. Alle 9 Deko-Figuren zusammen für 59 €!');
-      } else if (action === 'shipping') {
-        appendBotMessage(lang === 'en' ? '🚚 DHL Free Shipping: If you pick 3 or more items, shipping is 100% FREE! Otherwise, insured DHL tracked shipping is 5.50 €.' : '🚚 DHL Versand: Ab 3 Artikeln im Paket schenkt Leo dir die kompletten Versandkosten (0,00 € gratis)! Bei 1–2 Artikeln: 5,50 € versichertes DHL Tracking.');
+        const reply = lang === 'en' ?
+          'Top Bundle Deals: 1. Attack on Titan complete (-38%), 2. Haikyuu 29 vols (-38%), 3. Shojo Romance 4-in-1 for 20 € (-66%), and 4. All 9 Desk Figures for 59 €!' :
+          'Unsere besten Sparpakete: 1. Attack on Titan komplett (-38%), 2. Haikyuu 29 Bände (-38%), 3. Shojo Romance 4-in-1 für 20 € (-66%) und 4. Alle 9 Deko-Figuren zusammen für 59 €:';
+        appendBotMessage(reply, ['aot', 'haikyu', 'shojo']);
+      } else if (action === 'figures') {
+        setCategory('fig_orig');
+        const reply = lang === 'en' ?
+          'We have 4 high-end original figures in mint condition, plus 9 stylish desk figures:' :
+          'Wir haben 4 seltene Sammler-Originale (in OVP) sowie 9 hochwertige Deko-Figuren im Angebot:';
+        appendBotMessage(reply, ['kate', 'arknights_w', 'levi', 'death_note_l_ovp']);
+      } else if (action === 'condition') {
+        const reply = lang === 'en' ?
+          'Condition Guarantee: All manga come from a strictly pet-free, non-smoking collector household. 100% white book edges with zero yellowing. Insured DHL shipping with heavy bubble wrap packaging.' :
+          'Zustands-Garantie: Alle Bände stammen aus einem tierfreien Nichtraucherhaushalt, standen lichtgeschützt und haben 100% weiße Buchschnitte (kein Gilb). Leo verpackt jedes Paket stoßfest mit Luftpolsterfolie.';
+        appendBotMessage(reply, []);
+      } else if (action === 'test_webhook') {
+        appendBotMessage(lang === 'en' ? 'Testing Discord Webhook... Live signal dispatched!' : 'Sende Test-Signal an Leos Discord-Kanal...', []);
+        sendDiscordNotification('test_ping', {});
+        setTimeout(() => {
+          appendBotMessage(lang === 'en' ? 'Signal successfully delivered! Please check your #bot channel on Discord.' : 'Signal erfolgreich an Discord übermittelt! Schau jetzt in deinen Discord-Kanal #bot – du solltest den Ping mit Ton erhalten haben.', []);
+        }, 600);
       }
     }
 
-    function appendBotMessage(text) {
+    function appendBotMessage(text, productIds = []) {
       const container = document.getElementById('botMessagesContainer');
       const msgDiv = document.createElement('div');
-      msgDiv.className = 'flex items-start gap-2 pt-1';
+      msgDiv.className = 'flex items-start gap-2.5 pt-1.5';
+
+      let cardsHtml = '';
+      if (productIds && productIds.length > 0) {
+        const matchedProducts = products.filter(p => productIds.includes(p.id));
+        if (matchedProducts.length > 0) {
+          cardsHtml = `
+            <div class="mt-2 space-y-1.5 w-full">
+              ${matchedProducts.map(p => `
+                <div class="p-2 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between gap-2 hover:border-cyan-500/50 transition-colors">
+                  <div class="flex items-center gap-2 min-w-0">
+                    ${p.img ? `<img src="${p.img}" class="w-8 h-10 object-contain rounded bg-slate-900 p-0.5 shrink-0">` : `<div class="w-8 h-10 rounded bg-pink-950/40 text-pink-300 flex items-center justify-center font-bold text-[9px] shrink-0">4-in-1</div>`}
+                    <div class="min-w-0">
+                      <div class="text-[11px] font-black text-white truncate">${p.title}</div>
+                      <div class="text-[10px] text-emerald-400 font-bold">${p.dealPrice.toFixed(2)} € <span class="text-slate-500 line-through text-[9px]">${p.oldPrice.toFixed(2)} €</span></div>
+                    </div>
+                  </div>
+                  <button onclick="toggleCart('${p.id}')" class="px-2.5 py-1 rounded-lg bg-cyan-500/20 hover:bg-cyan-500 hover:text-black border border-cyan-500/40 text-cyan-300 text-[10px] font-bold transition-all shrink-0 active:scale-95">
+                    ${cart.includes(p.id) ? 'Im Paket' : '+ Paket'}
+                  </button>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+      }
+
       msgDiv.innerHTML = `
-        <span class="text-base shrink-0">🤖</span>
-        <div class="bg-slate-900 border border-cyan-800/60 text-slate-200 p-2.5 rounded-2xl rounded-tl-none max-w-[85%] leading-relaxed">
-          ${text}
+        <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-cyan-400 to-indigo-500 text-black flex items-center justify-center font-black text-[10px] shrink-0 font-display">K</div>
+        <div class="bg-slate-900 border border-cyan-900/60 text-slate-200 p-3 rounded-2xl rounded-tl-none max-w-[88%] leading-relaxed text-xs shadow-md">
+          <div>${text}</div>
+          ${cardsHtml}
         </div>
       `;
       container.appendChild(msgDiv);
       container.scrollTop = container.scrollHeight;
+    }
+
+    function generateKiraAiResponse(userText) {
+      const query = userText.toLowerCase().trim();
+      const lang = currentLang;
+
+      const findProd = (terms) => products.find(p => terms.some(t => p.title.toLowerCase().includes(t) || (p.subtitle_de && p.subtitle_de.toLowerCase().includes(t))));
+      const findProds = (terms) => products.filter(p => terms.some(t => p.title.toLowerCase().includes(t) || (p.subtitle_de && p.subtitle_de.toLowerCase().includes(t))));
+
+      // 1. Attack on Titan
+      if (query.includes('titan') || query.includes('aot') || query.includes('eren') || query.includes('isayama')) {
+        const p = findProd(['titan', 'aot']);
+        return {
+          text: lang === 'en'
+            ? 'Attack on Titan is our biggest highlight! It includes all 34 volumes complete with 5 slipcases for 199.00 € (retail was 279.00 €). Pristine collector condition with white book edges.'
+            : 'Attack on Titan ist das absolute Highlight der Sammlung! Alle 34 Bände komplett inklusive aller 5 Schuber für nur 199,00 € (Ladenpreis: 279,00 €). Makelloser Zustand mit weißen Buchschnitten.',
+          productIds: p ? [p.id] : []
+        };
+      }
+
+      // 2. Chainsaw Man
+      if (query.includes('chainsaw') || query.includes('denji') || query.includes('csm') || query.includes('fujimoto') || query.includes('makima') || query.includes('power')) {
+        const p = findProd(['chainsaw']);
+        const fig = findProd(['denji']);
+        const reze = findProd(['reze']);
+        return {
+          text: lang === 'en'
+            ? 'Chainsaw Man Part 1 (Volumes 1–11) is available for 59.00 € instead of 84.00 €! We also have the matching Denji and Reze desk figures in stock.'
+            : 'Chainsaw Man Part 1 (Bände 1–11 komplett) haben wir für nur 59,00 € statt 84,00 € da! Dazu passen perfekt die Denji- und Reze-Figuren.',
+          productIds: [p, fig, reze].filter(Boolean).map(x => x.id)
+        };
+      }
+
+      // 3. Berserk
+      if (query.includes('berserk') || query.includes('guts') || query.includes('griffith') || query.includes('miura')) {
+        const p = findProd(['berserk']);
+        return {
+          text: lang === 'en'
+            ? 'Berserk (Panini edition, Volumes 1–5) is in mint condition for 39.00 € (retail: 50.00 €). A masterpiece of dark fantasy.'
+            : 'Berserk (Panini-Ausgabe, Bände 1–5) ist im makellosen Zustand für nur 39,00 € (Ladenpreis: 50,00 €) verfügbar. Eines der besten Dark-Fantasy-Werke überhaupt.',
+          productIds: p ? [p.id] : []
+        };
+      }
+
+      // 4. Haikyu
+      if (query.includes('haikyu') || query.includes('volleyball') || query.includes('hinata') || query.includes('kageyama')) {
+        const p = findProd(['haikyu']);
+        return {
+          text: lang === 'en'
+            ? 'Haikyu!! is a huge 29-volume bundle (Kazé edition) for 129.00 € instead of 203.00 €! You save over 74 €, and insured DHL shipping is 100% free.'
+            : 'Haikyu!! ist eines unserer größten Sparpakete: 29 Bände (Kazé-Ausgabe) für 129,00 € statt 203,00 €! Du sparst über 74 € und der versicherte DHL-Versand ist kostenlos.',
+          productIds: p ? [p.id] : []
+        };
+      }
+
+      // 5. Jujutsu Kaisen
+      if (query.includes('jujutsu') || query.includes('jjk') || query.includes('gojo') || query.includes('sukuna') || query.includes('itadori')) {
+        const p = findProd(['jujutsu']);
+        const fig = findProd(['yuji']);
+        return {
+          text: lang === 'en'
+            ? 'Jujutsu Kaisen includes Volumes 0 through 16 for 79.00 € (retail: 119.00 €). We also have the Yuji Itadori mini figure in stock.'
+            : 'Jujutsu Kaisen umfasst Bände 0 bis 16 für 79,00 € statt 119,00 €. Außerdem gibt es noch die passende Yuji Itadori Figur.',
+          productIds: [p, fig].filter(Boolean).map(x => x.id)
+        };
+      }
+
+      // 6. Tokyo Ghoul
+      if (query.includes('tokyo ghoul') || query.includes('ghoul') || query.includes('kaneki')) {
+        const p1 = findProd(['tokyo ghoul 1-14', 'tokyo ghoul']);
+        const p2 = findProd(['gigantik']);
+        return {
+          text: lang === 'en'
+            ? 'We have Tokyo Ghoul complete (Volumes 1–14) for 69.00 €, plus the premium Gigantik 2-in-1 omnibus edition (Volumes 1–7) for 59.00 €!'
+            : 'Von Tokyo Ghoul haben wir sowohl die reguläre Reihe (Bände 1–14 komplett) für 69,00 € als auch die Gigantik-Doppelband-Edition (Bände 1–7) für 59,00 € im Angebot!',
+          productIds: [p1, p2].filter(Boolean).map(x => x.id)
+        };
+      }
+
+      // 7. Figures
+      if (query.includes('figur') || query.includes('statue') || query.includes('kate') || query.includes('levi') || query.includes('arknights') || query.includes('ovp')) {
+        const pList = findProds(['kate', 'arknights', 'levi', 'death note l sfc']);
+        return {
+          text: lang === 'en'
+            ? 'We have 4 rare original figures in mint condition: Marvel Hawkeye Kate Bishop (Kotobukiya) in box, Arknights W 1/7 in box, Levi Ackerman, and Death Note L SFC! Plus 9 desk figures for 7–10 € each.'
+            : 'Wir haben 4 seltene Sammler-Originale: Marvel Hawkeye Kate Bishop (Kotobukiya) in OVP, Arknights W 1/7 OVP, Levi Ackerman und Death Note L SFC! Dazu 9 tolle Deko-Figuren für je 7–10 € (oder alle 9 zusammen für 59 €).',
+          productIds: pList.slice(0, 3).map(x => x.id)
+        };
+      }
+
+      // 8. Naruto & Bleach
+      if (query.includes('naruto') || query.includes('bleach') || query.includes('sasuke') || query.includes('ichigo')) {
+        const n = findProd(['naruto']);
+        const b = findProd(['bleach']);
+        return {
+          text: lang === 'en'
+            ? 'Shonen classics: Naruto (Volumes 1–9) for 32.00 € and Bleach (Volumes 1–5) for 18.00 €! Perfect entry sets.'
+            : 'Shonen-Klassiker: Naruto (Bände 1–9) für 32,00 € und Bleach (Bände 1–5) für 18,00 €! Beide in top Zustand.',
+          productIds: [n, b].filter(Boolean).map(x => x.id)
+        };
+      }
+
+      // 9. Condition & Quality
+      if (query.includes('zustand') || query.includes('gilb') || query.includes('rauch') || query.includes('tier') || query.includes('verpack') || query.includes('fotos')) {
+        return {
+          text: lang === 'en'
+            ? 'Condition is 10/10: Strictly smoke-free, pet-free household. All book edges are bright white with zero yellowing. Every order is safely wrapped with thick bubble wrap and sturdy DHL boxes.'
+            : 'Zustand 10/10: Absolut tierfreier Nichtraucherhaushalt. Alle Buchschnitte sind strahlend weiß ohne jeglichen Gilb. Leo verpackt jede Sendung mit dicker Luftpolsterfolie und stabilem DHL-Karton.',
+          productIds: []
+        };
+      }
+
+      // 10. Shipping & Delivery
+      if (query.includes('versand') || query.includes('porto') || query.includes('dhl') || query.includes('kosten') || query.includes('gratis')) {
+        return {
+          text: lang === 'en'
+            ? 'Free Shipping: From 3 items in your bundle, Leo covers the full insured DHL shipping costs (0.00 € free)! For 1–2 items, insured DHL tracking is 5.50 €.'
+            : 'Versand-Vorteil: Ab 3 Artikeln im Paket schenkt Leo dir den kompletten versicherten DHL-Versand (0,00 € gratis)! Bei 1–2 Artikeln: 5,50 € mit Sendungsverfolgung.',
+          productIds: []
+        };
+      }
+
+      // 11. Discounts & Negotiation
+      if (query.includes('rabatt') || query.includes('preis') || query.includes('verhandel') || query.includes('billig') || query.includes('sparen') || query.includes('angebot')) {
+        return {
+          text: lang === 'en'
+            ? 'You save up to 66% compared to retail! Plus: select 3 items for free DHL shipping. You can also use the "Send Price Offer" button in your bundle to propose a custom amount to Leo.'
+            : 'Du sparst bei Leo bereits bis zu 66% gegenüber dem Buchhandel! Ab 3 Artikeln ist der Versand kostenlos. Im Warenkorb kannst du über den Button "Preisvorschlag an Leo" auch ein Gegenangebot machen.',
+          productIds: []
+        };
+      }
+
+      // 12. Recommendations / Bestsellers
+      if (query.includes('empfehl') || query.includes('tipp') || query.includes('bestseller') || query.includes('was lohnt') || query.includes('start') || query.includes('neu')) {
+        const top = findProds(['titan', 'chainsaw', 'berserk']);
+        return {
+          text: lang === 'en'
+            ? 'Top recommendations right now: Attack on Titan complete (huge deal), Chainsaw Man 1–11, and Berserk 1–5. All three are in pristine collector condition:'
+            : 'Meine Top-Empfehlungen: Attack on Titan komplett (riesige Ersparnis), Chainsaw Man 1–11 und Berserk 1–5. Alle drei Reihen sind im Top-Zustand:',
+          productIds: top.slice(0, 3).map(x => x.id)
+        };
+      }
+
+      // Default Intelligent AI response
+      const sample = findProds(['titan', 'chainsaw']);
+      return {
+        text: lang === 'en'
+          ? 'I forwarded your question directly to Leo via live Discord push! In the meantime, feel free to browse our collection or ask me about specific titles like Attack on Titan, Chainsaw Man or Figures:'
+          : 'Ich habe deine Frage soeben per Live-Push an Leos Smartphone weitergeleitet! In der Zwischenzeit kannst du mich gerne nach bestimmten Titeln fragen, z. B. Attack on Titan, Chainsaw Man, Berserk oder Figuren:',
+        productIds: sample.map(x => x.id)
+      };
     }
 
     function handleBotSendMessage(e) {
@@ -1924,7 +2294,6 @@
       input.value = '';
 
       const container = document.getElementById('botMessagesContainer');
-      const lang = currentLang;
 
       // User Message Bubble
       const userDiv = document.createElement('div');
@@ -1933,9 +2302,25 @@
         <div class="bg-cyan-500 text-black font-semibold p-2.5 rounded-2xl rounded-tr-none max-w-[85%] leading-relaxed text-xs">
           ${text}
         </div>
-        <span class="text-base shrink-0">👤</span>
+        <div class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center font-bold text-[10px] shrink-0 font-mono">DU</div>
       `;
       container.appendChild(userDiv);
+      container.scrollTop = container.scrollHeight;
+
+      // Show Animated Typing Indicator
+      const typingDiv = document.createElement('div');
+      typingDiv.id = 'botTypingIndicator';
+      typingDiv.className = 'flex items-start gap-2.5 pt-1.5';
+      typingDiv.innerHTML = `
+        <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-cyan-400 to-indigo-500 text-black flex items-center justify-center font-black text-[10px] shrink-0 font-display">K</div>
+        <div class="bg-slate-900 border border-slate-800 p-2.5 rounded-2xl rounded-tl-none flex items-center gap-1.5 shadow-sm">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" style="animation-delay: 150ms;"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" style="animation-delay: 300ms;"></span>
+          <span class="text-[10px] text-slate-400 font-mono ml-1 font-semibold">Kira tippt...</span>
+        </div>
+      `;
+      container.appendChild(typingDiv);
       container.scrollTop = container.scrollHeight;
 
       // Send to Discord via Webhook in background!
@@ -1947,14 +2332,15 @@
         cartSummary: cartSummary
       });
 
-      // Bot Answer Bubble
+      // Generate AI Answer after realistic typing delay (500ms)
       setTimeout(() => {
+        const ind = document.getElementById('botTypingIndicator');
+        if (ind) ind.remove();
+
+        const aiResponse = generateKiraAiResponse(text);
         playSound('success');
-        const replyText = lang === 'en' ?
-          'Thank you! Your message was sent directly to Leo via Discord. In the meantime, browse the collection or write to Leo directly on Vinted (@leonardoitde) or Kleinanzeigen!' :
-          'Danke! Deine Nachricht wurde gerade per Live-Ping an Leo weitergeleitet. Stöbere gerne weiter im Katalog oder schreibe Leo direkt auf Vinted (@leonardoitde) oder Kleinanzeigen!';
-        appendBotMessage(replyText);
-      }, 600);
+        appendBotMessage(aiResponse.text, aiResponse.productIds);
+      }, 550);
     }
 
     // KEYBOARD SHORTCUTS
